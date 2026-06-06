@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { Coffee, Home2, Menu2 } from '@vicons/tabler';
+import { Home2, Menu2 } from '@vicons/tabler';
 import { NIcon, useThemeVars } from 'naive-ui';
 import { storeToRefs } from 'pinia';
 import { RouterLink } from 'vue-router';
@@ -59,7 +59,7 @@ const tools = computed<ToolCategory[]>(() => [
           <div>
             IT-Tools
 
-            <c-link target="_blank" rel="noopener" :href="`https://github.com/sharevb/it-tools/tree/v${version}`">
+            <c-link target="_blank" rel="noopener" href="https://github.com/sYnVerse/sYnTools/tree/sYn-local-config">
               v{{ version }}
             </c-link>
 
@@ -69,7 +69,7 @@ const tools = computed<ToolCategory[]>(() => [
                 target="_blank"
                 rel="noopener"
                 type="primary"
-                :href="`https://github.com/sharevb/it-tools/tree/${commitSha}`"
+                :href="`https://github.com/sYnVerse/sYnTools/tree/${commitSha}`"
               >
                 {{ commitSha }}
               </c-link>
@@ -79,6 +79,19 @@ const tools = computed<ToolCategory[]>(() => [
             © {{ new Date().getFullYear() }}
             <c-link target="_blank" rel="noopener" href="https://corentin.tech?utm_source=it-tools&utm_medium=footer">
               Corentin Thomasset
+            </c-link>
+          </div>
+          <div style="margin-top: 8px; font-size: 0.85em; opacity: 0.85;">
+            <c-link target="_blank" rel="noopener noreferrer" href="https://christran.io">
+              christran.io
+            </c-link>
+            &bull;
+            <c-link target="_blank" rel="noopener noreferrer" href="https://christran.io/privacy">
+              Privacy Policy
+            </c-link>
+            &bull;
+            <c-link target="_blank" rel="noopener noreferrer" href="https://christran.io/terms">
+              Terms of Service
             </c-link>
           </div>
         </div>
@@ -116,19 +129,7 @@ const tools = computed<ToolCategory[]>(() => [
           <NavbarButtons v-if="!styleStore.isSmallScreen" />
         </div>
 
-        <c-tooltip position="bottom" :tooltip="$t('home.support')">
-          <c-button
-            round
-            href="https://www.buymeacoffee.com/sharevb"
-            rel="noopener"
-            target="_blank"
-            class="support-button"
-            :bordered="false"
-          >
-            <span v-if="!styleStore.isSmallScreen" mr-2>{{ $t('home.buyMeACoffee') }}</span>
-            <NIcon :component="Coffee" />
-          </c-button>
-        </c-tooltip>
+
       </div>
       <slot />
     </template>
