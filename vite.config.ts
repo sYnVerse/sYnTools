@@ -162,6 +162,8 @@ export default defineConfig({
     minify: 'esbuild',
     reportCompressedSize: !process.env.VERCEL,
     cssCodeSplit: true,
+    assetsInlineLimit: 0,
+    chunkSizeWarningLimit: 10000,
     // cssMinify: false,
     // modulePreload: false,
     rollupOptions: {
@@ -169,16 +171,16 @@ export default defineConfig({
       maxParallelFileOps: 2, // Caps simultaneous file reading
       output: {
         format: 'es',
-        // manualChunks: (id) => {
-        //   // if (id.includes('monaco-editor')) return 'monaco-editor';
-        //   if (id.includes('tesseract.js')) return 'tesseract.js';
-        //   if (id.includes('pdfjs')) return 'pdfjs';
-        //   if (id.includes('unicode')) return 'unicode';
-        //   // if (id.includes('transformers')) return 'transformers';
-        //   // if (id.includes("node_modules")) {
-        //   //   return "vendor";
-        //   // }
-        // },
+         manualChunks: (id) => {
+           if (id.includes('monaco-editor')) return 'monaco-editor';
+           if (id.includes('tesseract.js')) return 'tesseract.js';
+           if (id.includes('pdfjs')) return 'pdfjs';
+           if (id.includes('unicode')) return 'unicode';
+           if (id.includes('transformers')) return 'transformers';
+           if (id.includes("node_modules")) {
+             return "vendor";
+           }
+        },
         // sourcemapIgnoreList: (relativeSourcePath) => {
         //   const normalizedPath = path.normalize(relativeSourcePath);
         //   return normalizedPath.includes("node_modules");
