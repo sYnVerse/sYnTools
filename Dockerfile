@@ -22,8 +22,8 @@ RUN pnpm build
 # production stage
 FROM nginxinc/nginx-unprivileged:stable-alpine AS production-stage
 
-LABEL maintainer="ShareVB <sharevb@gmail.com>" \
-      org.opencontainers.image.authors="ShareVB <sharevb@gmail.com>"
+LABEL maintainer="sYnVerse <6634746+sYnVerse@users.noreply.github.com>" \
+      org.opencontainers.image.authors="sYnVerse <6634746+sYnVerse@users.noreply.github.com>"
 
 ENV VITE_VERCEL_ENV=production
 ARG BASE_URL
