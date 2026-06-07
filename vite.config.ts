@@ -166,6 +166,7 @@ export default defineConfig({
     // modulePreload: false,
     rollupOptions: {
       external: ['regex', './out/isolated_vm', 'isolated-vm', 'onnxruntime-node', 'unpdf/pdfjs'],
+      maxParallelFileOps: 2, // Caps simultaneous file reading
       output: {
         format: 'es',
         // manualChunks: (id) => {
