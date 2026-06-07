@@ -161,6 +161,7 @@ export default defineConfig({
     sourcemap: false,
     minify: 'esbuild',
     reportCompressedSize: !process.env.VERCEL,
+    cssCodeSplit: true,
     // cssMinify: false,
     // modulePreload: false,
     rollupOptions: {
