@@ -159,7 +159,7 @@ export default defineConfig({
   build: {
     target: 'esnext',
     sourcemap: false,
-    minify: esbuild,
+    minify: 'esbuild',
     reportCompressedSize: !process.env.VERCEL,
     // cssMinify: false,
     // modulePreload: false,
