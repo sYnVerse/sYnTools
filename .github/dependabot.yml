@@ -4,9 +4,10 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "weekly"
+    target-branch: "sYn-local-config"
     allow:
       - dependency-type: "production"
     groups:
-      production-dependencies:
+      production:
         patterns:
           - "*"
