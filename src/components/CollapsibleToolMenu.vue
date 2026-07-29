@@ -139,8 +139,10 @@ const themeVars = useThemeVars();
 </script>
 
 <template>
-  <div class="top-controls" mb-12px ml-12px>
-    <c-button :disabled="isToggling" @click="toggleAllCategories">
+  <!-- Full width: the label changes between expand/collapse, and a
+       hug-content button would jump in width on every toggle -->
+  <div class="top-controls" mb-12px mx-12px>
+    <c-button w-full :disabled="isToggling" @click="toggleAllCategories">
       <span v-if="isToggling">
         {{ areAllCollapsed ? $t('collapsibleToolMenu.text.expanding') : $t('collapsibleToolMenu.text.collapsing') }}
       </span>
@@ -198,9 +200,12 @@ const themeVars = useThemeVars();
   text-align: left;
   user-select: none;
 
-  &:hover {
-    background-color: v-bind('themeVars.buttonColor2Hover');
-    opacity: 0.8;
+  // Hover only on hover-capable devices; on touch it sticks after tapping
+  @media (hover: hover) {
+    &:hover {
+      background-color: v-bind('themeVars.buttonColor2Hover');
+      opacity: 0.8;
+    }
   }
 
   &.category-active {
@@ -208,12 +213,20 @@ const themeVars = useThemeVars();
     opacity: 1;
     color: white;
 
-    &:hover {
-      background-color: color-mix(in srgb, v-bind('themeVars.primaryColorHover') 50%, transparent);
+    @media (hover: hover) {
+      &:hover {
+        background-color: color-mix(in srgb, v-bind('themeVars.primaryColorHover') 50%, transparent);
+      }
     }
   }
 }
 .category-container {
+  // Offscreen categories skip layout and paint entirely, which keeps the sider
+  // width transition and expand/collapse animations from re-laying-out all ~460
+  // menu items on every frame.
+  content-visibility: auto;
+  contain-intrinsic-size: auto 36px;
+
 .menu-container {
   display: grid;
   grid-template-rows: 1fr;
@@ -258,8 +271,10 @@ const themeVars = useThemeVars();
           left: 14px;
         }
 
-        &:hover {
-          opacity: 0.5;
+        @media (hover: hover) {
+          &:hover {
+            opacity: 0.5;
+          }
         }
       }
     }

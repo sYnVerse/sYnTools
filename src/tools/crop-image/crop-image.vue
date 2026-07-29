@@ -156,8 +156,12 @@ function fitToViewport() {
   if (iRatio > vRatio) {
     // Fit width
     bW = vW;
+<<<<<<< HEAD
   }
   else {
+=======
+  } else {
+>>>>>>> sharevb/chore/all-my-stuffs
     // Fit height
     bW = vH * iRatio;
   }
@@ -252,8 +256,12 @@ function handleWheel(e: WheelEvent) {
   let newZoom = zoom.value;
   if (e.deltaY < 0) {
     newZoom = Math.min(zoom.value + zoomStep, 10.0);
+<<<<<<< HEAD
   }
   else {
+=======
+  } else {
+>>>>>>> sharevb/chore/all-my-stuffs
     newZoom = Math.max(zoom.value - zoomStep, 0.05);
   }
   zoom.value = newZoom;
@@ -278,8 +286,12 @@ function exportImage() {
       const scaleFactor = imgNaturalWidth.value / bW;
       canvasWidth = vW * scaleFactor;
       canvasHeight = vH * scaleFactor;
+<<<<<<< HEAD
     }
     else if (exportWidthMode.value === 'custom') {
+=======
+    } else if (exportWidthMode.value === 'custom') {
+>>>>>>> sharevb/chore/all-my-stuffs
       canvasWidth = customExportWidth.value;
       canvasHeight = customExportWidth.value / currentRatio.value;
     }
@@ -296,8 +308,12 @@ function exportImage() {
     if (backgroundColor.value !== '#00000000') {
       ctx.fillStyle = backgroundColor.value;
       ctx.fillRect(0, 0, canvasWidth, canvasHeight);
+<<<<<<< HEAD
     }
     else {
+=======
+    } else {
+>>>>>>> sharevb/chore/all-my-stuffs
       ctx.clearRect(0, 0, canvasWidth, canvasHeight);
     }
 
@@ -309,7 +325,11 @@ function exportImage() {
     const bH = baseDimensions.value.height;
     const ox = offsetX.value;
     const oy = offsetY.value;
+<<<<<<< HEAD
     const r = rotation.value * Math.PI / 180;
+=======
+    const r = (rotation.value * Math.PI) / 180;
+>>>>>>> sharevb/chore/all-my-stuffs
     const sx = zoom.value * (flipH.value ? -1 : 1);
     const sy = zoom.value * (flipV.value ? -1 : 1);
 
@@ -324,7 +344,12 @@ function exportImage() {
     ctx.restore();
 
     // Trigger Download
+<<<<<<< HEAD
     const mime = exportFormat.value === 'jpeg' ? 'image/jpeg' : exportFormat.value === 'webp' ? 'image/webp' : 'image/png';
+=======
+    const mime =
+      exportFormat.value === 'jpeg' ? 'image/jpeg' : exportFormat.value === 'webp' ? 'image/webp' : 'image/png';
+>>>>>>> sharevb/chore/all-my-stuffs
     const extension = exportFormat.value;
     const dataUrl = canvas.toDataURL(mime, exportQuality.value);
 
@@ -347,12 +372,16 @@ function exportImage() {
     <!-- Drop Zone Mode -->
     <c-card v-if="!imageSrc">
       <div flex flex-col items-center justify-center gap-6 py-12>
+<<<<<<< HEAD
         <c-file-upload
           accept="image/*"
           :title="t('tools.crop-image.texts.drag-drop')"
           w-full
           @file-upload="onUpload"
         />
+=======
+        <c-file-upload accept="image/*" :title="t('tools.crop-image.texts.drag-drop')" w-full @file-upload="onUpload" />
+>>>>>>> sharevb/chore/all-my-stuffs
       </div>
     </c-card>
 
@@ -389,7 +418,14 @@ function exportImage() {
                 >
                   <!-- Transparent checkerboard background -->
                   <div
+<<<<<<< HEAD
                     v-if="backgroundColor === '#00000000' || backgroundColor.includes('rgba(') && backgroundColor.endsWith(', 0)')"
+=======
+                    v-if="
+                      backgroundColor === '#00000000' ||
+                      (backgroundColor.includes('rgba(') && backgroundColor.endsWith(', 0)'))
+                    "
+>>>>>>> sharevb/chore/all-my-stuffs
                     class="checkerboard-bg pointer-events-none absolute inset-0"
                   />
 
@@ -403,7 +439,11 @@ function exportImage() {
                       transform: `translate(${offsetX}px, ${offsetY}px) rotate(${rotation}deg) scale(${zoom * (flipH ? -1 : 1)}, ${zoom * (flipV ? -1 : 1)})`,
                       transformOrigin: 'center center',
                     }"
+<<<<<<< HEAD
                   >
+=======
+                  />
+>>>>>>> sharevb/chore/all-my-stuffs
 
                   <!-- 3x3 rule of thirds grid overlay -->
                   <div
@@ -478,11 +518,15 @@ function exportImage() {
             <n-form label-placement="left" label-width="140" label-align="right">
               <!-- Aspect Ratio Presets -->
               <n-form-item :label="t('tools.crop-image.texts.aspect-ratio')">
+<<<<<<< HEAD
                 <c-select
                   v-model:value="aspectRatio"
                   :options="aspectRatioOptions"
                   w-full
                 />
+=======
+                <c-select v-model:value="aspectRatio" :options="aspectRatioOptions" w-full />
+>>>>>>> sharevb/chore/all-my-stuffs
               </n-form-item>
 
               <!-- Custom Aspect Ratio Inputs -->
@@ -497,7 +541,11 @@ function exportImage() {
               <!-- Background Color Picker -->
               <n-form-item :label="t('tools.crop-image.texts.background-color')">
                 <div w-full flex items-center gap-4>
+<<<<<<< HEAD
                   <n-color-picker v-model:value="backgroundColor" :modes="['hex', 'rgba']" class="flex-1" />
+=======
+                  <n-color-picker v-model:value="backgroundColor" :modes="['hex', 'rgba'] as any" class="flex-1" />
+>>>>>>> sharevb/chore/all-my-stuffs
                   <c-button size="small" @click="backgroundColor = '#00000000'">
                     {{ t('tools.crop-image.texts.transparent') }}
                   </c-button>
@@ -535,6 +583,7 @@ function exportImage() {
             <n-form label-placement="left" label-width="140" label-align="right">
               <!-- Export Format select -->
               <n-form-item :label="t('tools.crop-image.texts.export-format')">
+<<<<<<< HEAD
                 <c-select
                   v-model:value="exportFormat"
                   :options="exportFormatOptions"
@@ -544,6 +593,16 @@ function exportImage() {
 
               <!-- Quality slider for lossy formats -->
               <n-form-item v-if="exportFormat === 'jpeg' || exportFormat === 'webp'" :label="t('tools.crop-image.texts.image-quality')">
+=======
+                <c-select v-model:value="exportFormat" :options="exportFormatOptions" w-full />
+              </n-form-item>
+
+              <!-- Quality slider for lossy formats -->
+              <n-form-item
+                v-if="exportFormat === 'jpeg' || exportFormat === 'webp'"
+                :label="t('tools.crop-image.texts.image-quality')"
+              >
+>>>>>>> sharevb/chore/all-my-stuffs
                 <div w-full flex items-center gap-4>
                   <n-slider v-model:value="exportQuality" :min="0.1" :max="1" :step="0.05" class="flex-1" />
                   <span w-50px text-right font-mono>{{ Math.round(exportQuality * 100) }}%</span>
@@ -552,11 +611,15 @@ function exportImage() {
 
               <!-- Export width options -->
               <n-form-item :label="t('tools.crop-image.texts.export-width')">
+<<<<<<< HEAD
                 <c-select
                   v-model:value="exportWidthMode"
                   :options="exportWidthOptions"
                   w-full
                 />
+=======
+                <c-select v-model:value="exportWidthMode" :options="exportWidthOptions" w-full />
+>>>>>>> sharevb/chore/all-my-stuffs
               </n-form-item>
 
               <!-- Custom Export Width Input -->
@@ -584,6 +647,7 @@ function exportImage() {
 
 .checkerboard-bg {
   background-image:
+<<<<<<< HEAD
     linear-gradient(45deg, #e5e7eb 25%, transparent 25%),
     linear-gradient(-45deg, #e5e7eb 25%, transparent 25%),
     linear-gradient(45deg, transparent 75%, #e5e7eb 75%),
@@ -597,6 +661,22 @@ function exportImage() {
       linear-gradient(-45deg, #374151 25%, transparent 25%),
       linear-gradient(45deg, transparent 75%, #374151 75%),
       linear-gradient(-45deg, transparent 75%, #374151 75%);
+=======
+    linear-gradient(45deg, #e5e7eb 25%, transparent 25%), linear-gradient(-45deg, #e5e7eb 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #e5e7eb 75%), linear-gradient(-45deg, transparent 75%, #e5e7eb 75%);
+  background-size: 16px 16px;
+  background-position:
+    0 0,
+    0 8px,
+    8px -8px,
+    -8px 0px;
+
+  :deep(.dark) &,
+  .dark & {
+    background-image:
+      linear-gradient(45deg, #374151 25%, transparent 25%), linear-gradient(-45deg, #374151 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, #374151 75%), linear-gradient(-45deg, transparent 75%, #374151 75%);
+>>>>>>> sharevb/chore/all-my-stuffs
   }
 }
 

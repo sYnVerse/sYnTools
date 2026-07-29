@@ -1,10 +1,14 @@
 ## BREAKING CHANGE for Container Image
 
-Since the *base image* is now `nginx-unpriviledged` the container will now listen to port **8080** and not 80. So you need to update your port mapping, i.e. from `8080:80` to `8080:8080`.
+Since the _base image_ is now `nginx-unpriviledged` the container will now listen to port **8080** and not 80. So you need to update your port mapping, i.e. from `8080:80` to `8080:8080`.
 
 You can override listening port using environment variable `PORT` (docker option `-e PORT=8888`).
 
 If the container needs to listen to IPv6, it needs to be enabled: https://serverfault.com/questions/1147296/how-to-enable-ipv6-on-ubuntu-20-04. Alternatively, you can mount your own `nginx.conf` own using docker option `-v "./nginx.conf:/etc/nginx/templates/default.conf.template"` (with `listen [::]:8080;` removed)
+
+## Build requirements
+
+**To build this project**, you need around **16GB** (as it builds on Github workers). Below, you will get some `out of memory` or `node allocation failed`.
 
 ## PR Welcome
 
@@ -19,6 +23,7 @@ Some tools like PGP encryption rely on WebCrypto API that is only available in H
 So even on internal installations, you should enable HTTPS using Let's Encrypt using DNS Challenge
 
 Some docs about DNS Challenge:
+
 - https://medium.com/@life-is-short-so-enjoy-it/homelab-nginx-proxy-manager-setup-ssl-certificate-with-domain-name-in-cloudflare-dns-732af64ddc0b
 - https://doc.traefik.io/traefik/user-guides/docker-compose/acme-dns/
 - https://medium.com/@svenvanginkel/traefik-letsencrypt-dns01-challenge-with-ovhcloud-52f2a2c6d08a
@@ -97,12 +102,18 @@ WantedBy=multi-user.target default.target
 Restart=always
 ```
 
+## Use with companion Self Hosted docker services
+
+Some tools requires additional docker services: HTTPS/DNS tools/Ping, HTML to PDF, Docker Image Download, Multi Links Download, Short Url Expander and TCP/UDP Port tester.
+
+See complete example here: [docker-with-services](https://github.com/sharevb/it-tools/tree/chore/all-my-stuffs/docker-with-services)
 
 ## Filter tools and add home custom content
 
 You can add custom content in Home page by mounting a `home.custom.md` in `/usr/share/nginx/html`.
 
 You can filter available tools by mounting `tools-filter.json` in `/usr/share/nginx/html`. It can contains the following filtering regex:
+
 ```json
 {
   "excludeCategoryFilterRegex": "",
@@ -111,9 +122,10 @@ You can filter available tools by mounting `tools-filter.json` in `/usr/share/ng
   "includeToolsFilterRegex": ""
 }
 ```
+
 Category matches on category (English) names ; Tools matches on tools path/url.
 
-See [docker-tools-filter-and-home-content](https://github.com/sharevb/it-tools)
+See [docker-tools-filter-and-home-content](https://github.com/sharevb/it-tools/tree/chore/all-my-stuffs/docker-tools-filter-and-home-content)
 
 ## Add custom external tools
 
@@ -140,13 +152,16 @@ You can add custom external tools (href or markdownContent) by mounting a `exter
 ]
 ```
 
-See [docker-tools-filter-and-home-content](https://github.com/sharevb/it-tools)
+See [docker-tools-filter-and-home-content](https://github.com/sharevb/it-tools/tree/chore/all-my-stuffs/docker-tools-filter-and-home-content)
 
 ## Setting default tools parameters / default UI language at runtime
+
+For a complete sample, see [docker-with-services](https://github.com/sharevb/it-tools/tree/chore/all-my-stuffs/docker-with-services).
 
 You can set default tool parameters by mounting a `tools-settings.json` in `/usr/share/nginx/html`.
 
 It is a two level json, with the first level being for `tool name` and the second level for `parameter name`:
+
 ```json
 {
   "regex-tester": {
@@ -158,7 +173,9 @@ It is a two level json, with the first level being for `tool name` and the secon
 ```
 
 You can find `tool name` and `parameter name` in the tools source code `src/tools` subfolder :
+
 - example pattern for `const global = useQueryParamOrStorage({ storageName: 'regex-tester:g', name: 'global', defaultValue: true });`:
+
 ```json
 {
   "regex-tester": {
@@ -166,7 +183,9 @@ You can find `tool name` and `parameter name` in the tools source code `src/tool
   }
 }
 ```
+
 - example pattern for `const value = useQueryParam({ tool: 'barcode-gen', name: 'text', defaultValue: '123456789' });`:
+
 ```json
 {
   "barcode-gen": {
@@ -174,7 +193,9 @@ You can find `tool name` and `parameter name` in the tools source code `src/tool
   }
 }
 ```
+
 - example pattern for `const width = useITStorage('ascii-text-drawer:width', 80);`:
+
 ```json
 {
   "ascii-text-drawer": {
@@ -184,6 +205,7 @@ You can find `tool name` and `parameter name` in the tools source code `src/tool
 ```
 
 To define the default UI language, add a `default_locale` key to json:
+
 ```json
 {
   "default_locale": "fr"
@@ -200,6 +222,7 @@ docker run -d --name it-tools-fr --restart unless-stopped -p 8080:8080 it-tools-
 ## Build container image for a custom subfolder
 
 According to https://github.com/sharevb/it-tools/pull/461#issuecomment-1602506049 and https://github.com/CorentinTh/it-tools/pull/461:
+
 ```
 docker build -t it-tools  --build-arg BASE_URL="/my-folder/" .
 docker run -d --name it-tools --restart unless-stopped -p 8080:8080 it-tools
@@ -213,7 +236,7 @@ So you would need to put another server in front of it, like [Nginx Proxy Manage
 
 For `/it-tools/` subfolder, you can use `baseurl-it-tools` tag.
 
-See [sample of docker-compose.yml and nginx.conf](https://github.com/sharevb/it-tools/tree/chore/all-my-stuffs/docker-subfolder-sample), this docker image needs to have another reverse proxy in front of it, like [Nginx Proxy Manager](https://nginxproxymanager.com/), [Traefik](https://traefik.io/traefik/), [caddy](https://caddyserver.com/) etc. 
+See [sample of docker-compose.yml and nginx.conf](https://github.com/sharevb/it-tools/tree/chore/all-my-stuffs/docker-subfolder-sample), this docker image needs to have another reverse proxy in front of it, like [Nginx Proxy Manager](https://nginxproxymanager.com/), [Traefik](https://traefik.io/traefik/), [caddy](https://caddyserver.com/) etc.
 
 Setup a reverse proxy pass using `/it-tools/`. And you should be able to access it-tools in `/it-tools/` of your server.
 
@@ -243,14 +266,15 @@ Then navigate to http://localhost:8080/it-tools/
 
 Assuming you're already hosting it-tools behind a reverse proxy, you can configure forward-auth and enforce authentication from the reverse proxy
 
-* [Official guides](https://docs.goauthentik.io/docs/add-secure-apps/providers/proxy/server_nginx) with nginx. Guides with other reverse proxy setups are available
-* [Step-by-step setup guide with nginx-proxy-manager](https://geekscircuit.com/set-up-authentik-sso-with-nginx-proxy-manager/)
+- [Official guides](https://docs.goauthentik.io/docs/add-secure-apps/providers/proxy/server_nginx) with nginx. Guides with other reverse proxy setups are available
+- [Step-by-step setup guide with nginx-proxy-manager](https://geekscircuit.com/set-up-authentik-sso-with-nginx-proxy-manager/)
 
 (thanks @jogerj)
 
 ## Deploy as LXC container
 
 In Proxmox VE, you can use docker image directly:
+
 ```bash
 sudo lxc-create -n sharevb-it-tools -t oci -- --url docker://ghcr.io/sharevb/it-tools:latest
 ```
@@ -265,16 +289,17 @@ To install VSCode in WSL2 (Windows), see: https://learn.microsoft.com/en-us/wind
 
 - [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur)
 - [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [Oxc](https://marketplace.visualstudio.com/items?itemName=oxc.oxc-vscode) (oxlint + oxfmt)
 - [i18n Ally](https://marketplace.visualstudio.com/items?itemName=lokalise.i18n-ally)
 
 with the following settings:
 
 ```json
 {
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "oxc.oxc-vscode",
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.oxc": "always"
   },
   "i18n-ally.localesPaths": ["locales", "src/tools/*/locales"],
   "i18n-ally.keystyle": "nested"
@@ -316,18 +341,24 @@ pnpm build
 pnpm test
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+### Lint with [Oxlint](https://oxc.rs/docs/guide/usage/linter)
 
 ```sh
 pnpm lint
 ```
 
-### Ensure CI (lock, eslint, typecheck) will succeed
+### Format with [Oxfmt](https://oxc.rs/docs/guide/usage/formatter)
+
+```sh
+pnpm fmt
+```
+
+### Ensure CI (lock, oxlint, typecheck) will succeed
 
 Before submitting a PR, run:
 
 ```sh
-pnpm install --ignore-scripts && pnpm lint --fix && pnpm typecheck
+pnpm install --ignore-scripts && pnpm lint:fix && pnpm typecheck
 ```
 
 ### Create a new tool
@@ -344,11 +375,11 @@ It will create a directory in `src/tools` with the correct files. You will need 
 
 Local installation required installing first: `python3 make g++`
 
-| Container Image                         | Local Installation                                                                                                          |
-|-----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
+| Container Image                                                                                                                                                                    | Local Installation                                                                                                                                                                                               |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | GitHub Container Registry: <span title="triple click me!">`ghcr.io/sharevb/it-tools:latest`</span><br/>Docker Hub: <span title="triple click me!">`sharevb/it-tools:latest`</span> | <span title="triple click me!">`sudo apt-get install python3 make g++ && git clone -b chore/all-my-stuffs https://github.com/sharevb/it-tools.git && cd it-tools/ && pnpm i --ignore-scripts && pnpm dev`</span> |
-| replace your current image with this image | copy & paste oneliner (from github repo) |
-| You may need to clear cache and hard reload to get new features loading | Installing packages for the first time may take some time; please wait until it finishes |
+| replace your current image with this image                                                                                                                                         | copy & paste oneliner (from github repo)                                                                                                                                                                         |
+| You may need to clear cache and hard reload to get new features loading                                                                                                            | Installing packages for the first time may take some time; please wait until it finishes                                                                                                                         |
 
 <picture>
     <source srcset="./.github/logo-dark.png" media="(prefers-color-scheme: light)">

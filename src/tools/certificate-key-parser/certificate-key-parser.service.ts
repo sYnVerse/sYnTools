@@ -21,7 +21,13 @@ import { type LabelValue, getCSRLabelValues, getCertificateLabelValues, getFinge
 
 import { translate as t } from '@/plugins/i18n.plugin';
 
-export async function getKeysOrCertificatesInfosAsync(keyOrCertificateValue: string | Buffer, passphrase: string) {
+export async function getKeysOrCertificatesInfosAsync(
+  keyOrCertificateValue: string | Buffer,
+  passphrase: string,
+  add_missing_type: string | null = null) {
+  if (add_missing_type && !keyOrCertificateValue.toString().trim().startsWith('-----BEGIN')) {
+    keyOrCertificateValue = `-----BEGIN ${add_missing_type}-----\n${keyOrCertificateValue.toString().trim()}\n-----END ${add_missing_type}-----`;
+  }
   const parts = keyOrCertificateValue.toString().trim().split(/(-----BEGIN [^-]+-----\n)/).filter(s => s !== '');
   if (!parts.length) {
     return [await getKeyOrCertificateInfosAsync(keyOrCertificateValue, passphrase)];

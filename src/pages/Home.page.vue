@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { IconDragDrop, IconHeart } from '@tabler/icons-vue';
+import IconDragDrop from '~icons/tabler/drag-drop';
+import IconHeart from '~icons/tabler/heart';
 import { useHead } from '@vueuse/head';
 import { computed, nextTick, onMounted, onUnmounted, ref } from 'vue';
 import Draggable from 'vuedraggable';
@@ -12,7 +13,9 @@ import { config } from '@/config';
 const { t } = useI18n();
 
 const toolStore = useToolStore();
-const desc = t('home.page.text.collection-of-handy-online-tools-for-developers-with-great-ux-it-tools-is-a-free-and-open-source-collection-of-handy-online-tools-for-developers-and-people-working-in-it');
+const desc = t(
+  'home.page.text.collection-of-handy-online-tools-for-developers-with-great-ux-it-tools-is-a-free-and-open-source-collection-of-handy-online-tools-for-developers-and-people-working-in-it',
+);
 const title = t('home.page.text.it-tools-handy-online-tools-for-developers');
 
 useHead({
@@ -21,7 +24,7 @@ useHead({
     {
       itemprop: 'name',
       content: title,
-    },
+    } as never,
     {
       property: 'og:title',
       content: title,
@@ -37,7 +40,7 @@ useHead({
     {
       itemprop: 'description',
       content: desc,
-    },
+    } as never,
     {
       property: 'og:description',
       content: desc,
@@ -87,10 +90,7 @@ const visibleTools = computed(() => {
 // Function to load next batch
 function loadNextBatch() {
   if (visibleToolsCount.value < toolStore.tools.length) {
-    visibleToolsCount.value = Math.min(
-      visibleToolsCount.value + TOOLS_PER_BATCH,
-      toolStore.tools.length,
-    );
+    visibleToolsCount.value = Math.min(visibleToolsCount.value + TOOLS_PER_BATCH, toolStore.tools.length);
   }
 }
 
@@ -126,7 +126,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="pt-50px">
+  <div class="home-content pt-50px">
     <div class="grid-wrapper">
       <div class="grid grid-cols-1 gap-12px lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 xl:grid-cols-4">
         <ColoredCard v-if="config.showBanner" :title="$t('home.follow.title')" :icon="IconHeart">
@@ -136,7 +136,8 @@ onUnmounted(() => {
             rel="noopener"
             target="_blank"
             :aria-label="$t('home.follow.githubRepository')"
-          >GitHub</a>
+            >GitHub</a
+          >
           {{ $t('home.follow.thankYou') }}
           <n-icon :component="IconHeart" />
         </ColoredCard>
@@ -197,6 +198,14 @@ onUnmounted(() => {
 </template>
 
 <style scoped lang="less">
+// The 50px top spacing is a desktop nicety; on mobile it pushes the content
+// too far below the top bar.
+.home-content {
+  @media (max-width: 700px) {
+    padding-top: 0;
+  }
+}
+
 .height-enter-active,
 .height-leave-active {
   transition: all 0.5s ease-in-out;
@@ -228,7 +237,7 @@ onUnmounted(() => {
   }
   100% {
     opacity: 0.4;
-    transform: scale(1.0);
+    transform: scale(1);
   }
 }
 </style>
