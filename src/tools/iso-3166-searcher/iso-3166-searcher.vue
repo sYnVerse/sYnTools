@@ -30,6 +30,10 @@ const { searchResult } = useFlexSearch({
   limit,
 });
 
+function neighborCountryNames(ids: string[]) {
+  return ids.map((id) => CountriesDB.getCountry(id, 'name')?.toString() || id).join(', ') || 'None';
+}
+
 function langToName(code: string) {
   const name = ISO6391.getName(code);
   if (!name) {
@@ -244,11 +248,7 @@ onUnmounted(() => {
                   label-width="150px"
                   :label="t('tools.iso-3166-searcher.texts.label-neighbor-countries')"
                   label-position="left"
-                  :value="
-                    result.neighborCountryIds
-                      .map((id) => CountriesDB.getCountry(id, 'name')?.toString() || id)
-                      .join(', ') || 'None'
-                  "
+                  :value="neighborCountryNames(result.neighborCountryIds)"
                   :readonly="true"
                   mb-1
                 />
@@ -268,7 +268,8 @@ onUnmounted(() => {
                   :readonly="true"
                   mb-1
                 />
-                <!-- //NOSONAR --><n-a
+                <!-- //NOSONAR -->
+                <n-a
                   :href="`https://www.openstreetmap.org/#map=5/${result.coordinates.latitude}/${result.coordinates.longitude}`"
                   target="_blank"
                 >

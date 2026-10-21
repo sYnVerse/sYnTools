@@ -51,7 +51,7 @@ function selectOption(option: CButtonSelectOption<T>) {
       <c-tooltip v-for="option in options" :key="option.value as PropertyKey" :tooltip="option.tooltip">
         <c-button
           :data-test-id="option.value"
-          :size="size"
+          :size="props.size"
           :type="option.value === value ? 'primary' : 'default'"
           @click="selectOption(option)"
         >

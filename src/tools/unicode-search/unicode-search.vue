@@ -116,7 +116,8 @@ const { searchResult } = useFlexSearch({
             <tr v-for="(result, ix) in searchResult" :key="ix">
               <td>
                 <input-copyable :value="`U+${toPaddedHex(result.codePoint)}`" :readonly="true" mb-1 />
-                <!-- //NOSONAR --><n-a
+                <!-- //NOSONAR -->
+                <n-a
                   :href="`https://unicodeplus.com/U+${toPaddedHex(result.codePoint)}`"
                   target="_blank"
                 >

@@ -66,6 +66,8 @@ export default defineConfig({
     'typescript/unbound-method': 'warn',
 
     'import/default': 'off',
+    // Dynamic lookups on `import * as ns` (units-converter, stopword) are intentional.
+    'import/namespace': 'off',
     'vue/no-dupe-keys': 'off',
     'vitest/valid-expect': 'off',
     'vitest/expect-expect': 'off',
