@@ -1,8 +1,12 @@
 <script setup lang="ts">
 import { useHead } from '@vueuse/head';
+import { useThemeVars } from 'naive-ui';
+import { useStyleStore } from '@/stores/style.store';
 
 const { t } = useI18n();
 const title = t('about.page.document-title');
+const themeVars = useThemeVars();
+const styleStore = useStyleStore();
 
 useHead({
   title,
@@ -13,6 +17,10 @@ useHead({
     },
   ],
 });
+
+// Brand accent from christran.io; pick the shade that keeps AA contrast on the current theme bg.
+const accent = computed(() => (styleStore.isDarkTheme ? '#7B9EFF' : '#3D5FD9'));
+const accentHover = computed(() => (styleStore.isDarkTheme ? '#A8C0FF' : '#2F4CC4'));
 
 const links = computed(() => [
   { href: 'https://tools.christran.io', label: t('about.page.link-tools') },
@@ -112,38 +120,24 @@ const links = computed(() => [
 
 <style scoped lang="less">
 .about-page {
-  --about-accent: #7b9eff;
-  --about-accent-dark: #4b6edf;
-  --about-ink: #0b1021;
-  --about-muted: #5b647a;
-  --about-panel: rgba(123, 158, 255, 0.06);
-  --about-border: rgba(123, 158, 255, 0.18);
-
   max-width: 40rem;
   margin: 2.5rem auto 3.5rem;
   padding: 0 1.25rem 2rem;
-  color: var(--about-ink);
+  color: v-bind('themeVars.textColor1');
   line-height: 1.65;
-}
-
-:global(html.dark) .about-page {
-  --about-ink: #d2d7eb;
-  --about-muted: #b0bad1;
-  --about-panel: rgba(123, 158, 255, 0.08);
-  --about-border: rgba(123, 158, 255, 0.22);
 }
 
 .about-hero {
   margin-bottom: 2rem;
   padding: 1.5rem 1.25rem;
-  border: 1px solid var(--about-border);
+  border: 1px solid v-bind('themeVars.borderColor');
   border-radius: 12px;
-  background: var(--about-panel);
+  background: v-bind('themeVars.cardColor');
 }
 
 .about-eyebrow {
   margin: 0 0 0.5rem;
-  color: var(--about-accent);
+  color: v-bind('accent');
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -152,7 +146,7 @@ const links = computed(() => [
 
 .about-title {
   margin: 0 0 0.5rem;
-  color: var(--about-ink);
+  color: v-bind('themeVars.textColor1');
   font-size: clamp(1.75rem, 4vw, 2.4rem);
   font-weight: 700;
   line-height: 1.15;
@@ -161,7 +155,7 @@ const links = computed(() => [
 
 .about-tagline {
   margin: 0;
-  color: var(--about-muted);
+  color: v-bind('themeVars.textColor2');
   font-size: 1.05rem;
 }
 
@@ -170,24 +164,24 @@ const links = computed(() => [
 
   h2 {
     margin: 0 0 0.65rem;
-    color: var(--about-ink);
+    color: v-bind('themeVars.textColor1');
     font-size: 1.15rem;
     font-weight: 700;
   }
 
   p {
     margin: 0 0 0.75rem;
-    color: var(--about-muted);
+    color: v-bind('themeVars.textColor2');
   }
 
-  :deep(a),
-  :deep(.n-a) {
-    color: var(--about-accent) !important;
+  :deep(a.c-link),
+  :deep(.c-link) {
+    color: v-bind('accent') !important;
   }
 
-  :deep(a:hover),
-  :deep(.n-a:hover) {
-    color: var(--about-accent-dark) !important;
+  :deep(a.c-link:hover),
+  :deep(.c-link:hover) {
+    color: v-bind('accentHover') !important;
   }
 }
 
