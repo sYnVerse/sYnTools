@@ -127,26 +127,6 @@ home:
       it-tools-handy-online-tools-for-developers: IT Tools - Handy online tools for developers
 tools:
   crop-image:
-<<<<<<< HEAD
-    title: "Crop image"
-    description: "Crop, resize, and rotate images with custom background colors."
-    texts:
-      drag-drop: "Drag and drop your image here, or click to browse"
-      drag-hint: "Drag to position • Scroll to zoom ({zoom}%)"
-      flip-h: "Flip H"
-      flip-v: "Flip V"
-      reset: "Reset"
-      fit: "Fit"
-      change-image: "Change Image"
-      aspect-ratio: "Aspect Ratio:"
-      custom-ratio: "Custom Ratio:"
-      background-color: "Background Color:"
-      transparent: "Transparent"
-      zoom-image: "Zoom Image:"
-      rotate-image: "Rotate Image:"
-      rule-of-thirds-grid: "Rule-of-Thirds Grid:"
-      export-settings: "Export Settings"
-=======
     title: Crop image
     description: Crop, resize, and rotate images with custom background colors.
     texts:
@@ -165,24 +145,10 @@ tools:
       rotate-image: "Rotate Image:"
       rule-of-thirds-grid: "Rule-of-Thirds Grid:"
       export-settings: Export Settings
->>>>>>> sharevb/chore/all-my-stuffs
       export-format: "Export Format:"
       image-quality: "Image Quality:"
       export-width: "Export Width:"
       custom-width: "Custom Width (px):"
-<<<<<<< HEAD
-      export-download-image: "Export & Download Cropped Image"
-      ratio-square: "1:1 (Square)"
-      ratio-widescreen: "16:9 (Widescreen)"
-      ratio-portrait: "9:16 (Portrait)"
-      ratio-standard: "4:3 (Standard)"
-      ratio-photo: "3:2 (Photo)"
-      ratio-original: "Original Aspect Ratio"
-      ratio-custom: "Custom Ratio"
-      width-original: "Original Crop Size"
-      width-viewport: "Viewport Size"
-      width-custom: "Custom Width"
-=======
       export-download-image: Export & Download Cropped Image
       ratio-square: 1:1 (Square)
       ratio-widescreen: 16:9 (Widescreen)
@@ -197,7 +163,6 @@ tools:
       label-png: PNG
       label-jpeg: JPEG
       label-webp: WebP
->>>>>>> sharevb/chore/all-my-stuffs
   chronometer:
     title: Chronometer
     description: Monitor the duration of a thing. Basically a chronometer with

@@ -1,4 +1,3 @@
-import { spawnSync } from 'node:child_process';
 import { describe, expect, it } from 'vitest';
 import { Base64 } from 'js-base64';
 import { generateKeyPair } from './generateKeyPair';
@@ -82,23 +81,31 @@ describe('wireguard generateKeyPair', () => {
     expect(recomputed.publicKey).toBe(a.publicKey);
   });
 
-  it('cross-checks Alice public key against wg pubkey when available', () => {
-    const wgCheck = spawnSync('wg', ['help'], { encoding: 'utf8' });
-    if (wgCheck.error || (wgCheck.status !== 0 && wgCheck.status !== 1)) {
-      // wireguard-tools not installed — skip without failing the suite
+  it('matches wg pubkey for the Alice RFC vector when wireguard-tools is available', () => {
+    // child_process is polyfilled away under vitest's jsdom + nodePolyfills, so
+    // invoke `wg` via a tiny Node subprocess instead of importing spawnSync.
+    // eslint-disable-next-line ts/no-require-imports
+    const { execFileSync } = require('node:child_process') as typeof import('node:child_process');
+    if (typeof execFileSync !== 'function') {
       return;
     }
 
-    const alice = generateKeyPair({
-      privateKey: hexToBytes(ALICE_PRIVATE_HEX),
-      preSharedKey: false,
-    });
-    const result = spawnSync('wg', ['pubkey'], {
-      input: alice.privateKey,
-      encoding: 'utf8',
-    });
-
-    expect(result.status).toBe(0);
-    expect(result.stdout.trim()).toBe(alice.publicKey);
+    let wgPubkey: string;
+    try {
+      const alice = generateKeyPair({
+        privateKey: hexToBytes(ALICE_PRIVATE_HEX),
+        preSharedKey: false,
+      });
+      wgPubkey = execFileSync('wg', ['pubkey'], {
+        input: alice.privateKey,
+        encoding: 'utf8',
+      }).trim();
+      expect(wgPubkey).toBe(alice.publicKey);
+    } catch (error: any) {
+      if (error?.code === 'ENOENT') {
+        return;
+      }
+      throw error;
+    }
   });
 });

@@ -134,26 +134,6 @@ home:
       it-tools-handy-online-tools-for-developers: Εργαλεία IT - Χρήσιμα διαδικτυακά εργαλεία για προγραμματιστές
 tools:
   crop-image:
-<<<<<<< HEAD
-    title: "Περικοπή εικόνας"
-    description: "Περικοπή, αλλαγή μεγέθους και περιστροφή εικόνων με προσαρμοσμένα χρώματα φόντου."
-    texts:
-      drag-drop: "Σύρετε και αποθέστε την εικόνα σας εδώ, ή κάντε κλικ για περιήγηση"
-      drag-hint: "Σύρετε για τοποθέτηση • Κυλήστε για ζουμ ({zoom}%)"
-      flip-h: "Οριζόντια Αναστροφή"
-      flip-v: "Κατακόρυφη Αναστροφή"
-      reset: "Επαναφορά"
-      fit: "Προσαρμογή"
-      change-image: "Αλλαγή Εικόνας"
-      aspect-ratio: "Αναλογία Διαστάσεων:"
-      custom-ratio: "Προσαρμοσμένη Αναλογία:"
-      background-color: "Χρώμα Φόντου:"
-      transparent: "Διαφανές"
-      zoom-image: "Ζουμ Εικόνας:"
-      rotate-image: "Περιστροφή Εικόνας:"
-      rule-of-thirds-grid: "Πλέγμα Κανόνα των Τρίτων:"
-      export-settings: "Ρυθμίσεις Εξαγωγής"
-=======
     title: Περικοπή εικόνας
     description: Περικοπή, αλλαγή μεγέθους και περιστροφή εικόνων με προσαρμοσμένα
       χρώματα φόντου.
@@ -173,24 +153,10 @@ tools:
       rotate-image: "Περιστροφή Εικόνας:"
       rule-of-thirds-grid: "Πλέγμα Κανόνα των Τρίτων:"
       export-settings: Ρυθμίσεις Εξαγωγής
->>>>>>> sharevb/chore/all-my-stuffs
       export-format: "Μορφή Εξαγωγής:"
       image-quality: "Ποιότητα Εικόνας:"
       export-width: "Πλάτος Εξαγωγής:"
       custom-width: "Προσαρμοσμένο Πλάτος (px):"
-<<<<<<< HEAD
-      export-download-image: "Εξαγωγή & Λήψη Περικομμένης Εικόνας"
-      ratio-square: "1:1 (Τετράγωνο)"
-      ratio-widescreen: "16:9 (Ευρεία οθόνη)"
-      ratio-portrait: "9:16 (Πορτρέτο)"
-      ratio-standard: "4:3 (Τυπικό)"
-      ratio-photo: "3:2 (Φωτογραφία)"
-      ratio-original: "Αρχική Αναλογία Διαστάσεων"
-      ratio-custom: "Προσαρμοσμένη Αναλογία"
-      width-original: "Αρχικό Μέγεθος Περικοπής"
-      width-viewport: "Μέγεθος Παραθύρου Προβολής"
-      width-custom: "Προσαρμοσμένο Πλάτος"
-=======
       export-download-image: Εξαγωγή & Λήψη Περικομμένης Εικόνας
       ratio-square: 1:1 (Τετράγωνο)
       ratio-widescreen: 16:9 (Ευρεία οθόνη)
@@ -205,7 +171,6 @@ tools:
       label-png: PNG
       label-jpeg: JPEG
       label-webp: WebP
->>>>>>> sharevb/chore/all-my-stuffs
   chronometer:
     title: Χρονόμετρο
     description: Παρακολουθήστε τη διάρκεια ενός πράγματος. Ουσιαστικά, ένα

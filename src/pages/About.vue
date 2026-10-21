@@ -1,20 +1,10 @@
 <script setup lang="ts">
-<<<<<<< HEAD
-=======
 import * as _ from 'es-toolkit/compat';
->>>>>>> sharevb/chore/all-my-stuffs
 import { useHead } from '@vueuse/head';
+import { storeToRefs } from 'pinia';
+import { useToolStore } from '@/tools/tools.store';
 
 const { t } = useI18n();
-<<<<<<< HEAD
-const title = t('about.text.about-it-tools');
-
-useHead({ title });
-</script>
-
-<template>
-  <c-markdown :markdown="$t('about.content-fork')" mx-auto mt-50px max-w-600px />
-=======
 
 const toolStore = useToolStore();
 
@@ -124,5 +114,4 @@ const favoritesJson = computed(() => JSON.stringify(favoriteToolsName.value));
       </tbody>
     </n-table>
   </n-card>
->>>>>>> sharevb/chore/all-my-stuffs
 </template>
