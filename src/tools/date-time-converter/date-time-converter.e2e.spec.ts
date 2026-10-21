@@ -4,9 +4,12 @@ import { expect, test } from '@playwright/test';
 const timezoneOutput = '.n-dynamic-input input[readonly]';
 
 async function openConverterWithTimezone(page: Page, timezone: string) {
-  await page.addInitScript(({ timezone }: { timezone: string }) => {
-    localStorage.setItem('date-time-converter:timezones', JSON.stringify([{ name: timezone }]));
-  }, { timezone });
+  await page.addInitScript(
+    ({ timezone }: { timezone: string }) => {
+      localStorage.setItem('date-time-converter:timezones', JSON.stringify([{ name: timezone }]));
+    },
+    { timezone },
+  );
 
   await page.goto('/date-converter');
 }
@@ -17,7 +20,7 @@ test.describe('Date time converter', () => {
   });
 
   test('Has correct title', async ({ page }) => {
-    await expect(page).toHaveTitle('Date-time converter - IT Tools');
+    await expect(page).toHaveTitle('Date-time converter - sYnTools');
   });
 
   test('Format is auto detected from a date and the date is correctly converted', async ({ page }) => {

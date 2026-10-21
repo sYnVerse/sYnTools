@@ -6,7 +6,7 @@ test.describe('Tool - Markdown preview', () => {
   });
 
   test('Has correct title', async ({ page }) => {
-    await expect(page).toHaveTitle('Markdown preview - IT Tools');
+    await expect(page).toHaveTitle('Markdown preview - sYnTools');
   });
 
   test('renders markdown in preview as user types', async ({ page }) => {

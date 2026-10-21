@@ -6,7 +6,7 @@ test.describe('Tool - JSON to CSV', () => {
   });
 
   test('Has correct title', async ({ page }) => {
-    await expect(page).toHaveTitle('JSON to CSV - IT Tools');
+    await expect(page).toHaveTitle('JSON to CSV - sYnTools');
   });
 
   test('Provided json is converted to csv', async ({ page }) => {
@@ -19,7 +19,8 @@ test.describe('Tool - JSON to CSV', () => {
 
     const generatedJson = await page.getByTestId('area-content').innerText();
 
-    expect(generatedJson.trim()).toEqual(`
+    expect(generatedJson.trim()).toEqual(
+      `
 Age,Salary,Gender,Country,Purchased
 18,20000,Male,Germany,N
 19,22000,Female,France,N

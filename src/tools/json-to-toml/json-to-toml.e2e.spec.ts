@@ -6,11 +6,12 @@ test.describe('Tool - JSON to TOML', () => {
   });
 
   test('Has correct title', async ({ page }) => {
-    await expect(page).toHaveTitle('JSON to TOML - IT Tools');
+    await expect(page).toHaveTitle('JSON to TOML - sYnTools');
   });
 
   test('JSON is parsed and outputs clean TOML', async ({ page }) => {
-    await page.getByTestId('input').fill(`
+    await page.getByTestId('input').fill(
+      `
 {
    "foo": "bar",
    "list": {
@@ -20,7 +21,8 @@ test.describe('Tool - JSON to TOML', () => {
       }
    }
 }
-    `.trim());
+    `.trim(),
+    );
 
     const generatedJson = await page.getByTestId('area-content').innerText();
 

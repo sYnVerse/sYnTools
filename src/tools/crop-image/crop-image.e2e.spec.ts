@@ -15,7 +15,7 @@ test.describe('Tool - Crop image', () => {
   });
 
   test('Has correct title', async ({ page }) => {
-    await expect(page).toHaveTitle('Crop image - IT Tools');
+    await expect(page).toHaveTitle('Crop image - sYnTools');
   });
 
   test('Upload an image and interact with crop controls', async ({ page }) => {

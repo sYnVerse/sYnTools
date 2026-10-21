@@ -9,7 +9,7 @@ test.describe('Tool - Random Line Picker', () => {
   });
 
   test('Has correct title', async ({ page }) => {
-    await expect(page).toHaveTitle('Random Line Picker - IT Tools');
+    await expect(page).toHaveTitle('Random Line Picker - sYnTools');
   });
 
   test('Picks random lines without repeats', async ({ page }) => {

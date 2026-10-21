@@ -6,19 +6,22 @@ test.describe('Tool - CSV to JSON', () => {
   });
 
   test('Has correct title', async ({ page }) => {
-    await expect(page).toHaveTitle('CSV to JSON - IT Tools');
+    await expect(page).toHaveTitle('CSV to JSON - sYnTools');
   });
 
   test('Provided csv is converted to json', async ({ page }) => {
-    await page.getByTestId('input').fill(`
+    await page.getByTestId('input').fill(
+      `
 Age,Salary,Gender,Country,Purchased
 18,20000,Male,Germany,N
 19,22000,Female,France,N
-    `.trim());
+    `.trim(),
+    );
 
     const generatedJson = await page.getByTestId('area-content').innerText();
 
-    expect(generatedJson.trim()).toEqual(`
+    expect(generatedJson.trim()).toEqual(
+      `
 [
   {
     "Age": "18",

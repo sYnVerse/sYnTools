@@ -6,7 +6,7 @@ test.describe('Tool - XML formatter', () => {
   });
 
   test('Has correct title', async ({ page }) => {
-    await expect(page).toHaveTitle('XML formatter - IT Tools');
+    await expect(page).toHaveTitle('XML formatter - sYnTools');
   });
 
   test('XML is converted into a human readable format', async ({ page }) => {
@@ -14,10 +14,12 @@ test.describe('Tool - XML formatter', () => {
 
     const formattedXml = await page.getByTestId('area-content').innerText();
 
-    expect(formattedXml.trim()).toEqual(`
+    expect(formattedXml.trim()).toEqual(
+      `
 <foo>
   <bar>baz</bar>
   <bar>baz</bar>
-</foo>`.trim());
+</foo>`.trim(),
+    );
   });
 });

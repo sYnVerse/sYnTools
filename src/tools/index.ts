@@ -1,18 +1,17 @@
 import type { ExternalTool, ToolCategory, ToolWithCategory, ToolsFilter } from './tools.types';
 import { translate as t } from '@/plugins/i18n.plugin';
+import { appBaseUrl as base } from '@/utils/base-url';
 
 const modules = import.meta.glob<true, string, ToolWithCategory>('./*/index.ts', { eager: true, import: 'tool' });
-
-const base = import.meta.env.BASE_URL ?? '/';
 
 // Both config files are optional; fetch them in parallel so app boot waits on at
 // most one network round-trip instead of two sequential ones.
 const [filterConfig, externalTools] = await Promise.all([
   fetch(`${base}tools-filter.json`)
-    .then(response => (response.ok ? response.json() as Promise<ToolsFilter> : ({} as ToolsFilter)))
-    .catch(() => ({} as ToolsFilter)),
+    .then((response) => (response.ok ? (response.json() as Promise<ToolsFilter>) : ({} as ToolsFilter)))
+    .catch(() => ({}) as ToolsFilter),
   fetch(`${base}external-tools.json`)
-    .then(response => (response.ok ? response.json() as Promise<ExternalTool[]> : ([] as ExternalTool[])))
+    .then((response) => (response.ok ? (response.json() as Promise<ExternalTool[]>) : ([] as ExternalTool[])))
     .catch(() => [] as ExternalTool[]),
 ]);
 
@@ -22,21 +21,23 @@ const allModules: ToolWithCategory[] = Object.values(modules);
 // configures external tools, so it stays out of the startup bundle.
 if (externalTools.length > 0) {
   const { default: markdownit } = await import('markdown-it');
-  allModules.push(...externalTools.map((externalTool) => {
-    const html = markdownit().render(externalTool.markdownContent
-        || (externalTool.href
-          ? `${t('tools.external-link-goto')} [${externalTool.href}](${externalTool.href})`
-          : ''));
-    return ({
-      icon: defineAsyncComponent(() => import('@vicons/tabler/es/ExternalLink')),
-      ...externalTool,
-      component: () => import('@/components/ExternalToolContent.vue'),
-      externalHTMLContent: html,
-    }) as ToolWithCategory;
-  }));
+  allModules.push(
+    ...externalTools.map((externalTool) => {
+      const html = markdownit().render(
+        externalTool.markdownContent ||
+          (externalTool.href ? `${t('tools.external-link-goto')} [${externalTool.href}](${externalTool.href})` : ''),
+      );
+      return {
+        icon: defineAsyncComponent(() => import('@vicons/tabler/es/ExternalLink')),
+        ...externalTool,
+        component: () => import('@/components/ExternalToolContent.vue'),
+        externalHTMLContent: html,
+      } as ToolWithCategory;
+    }),
+  );
 }
 
-const makeRegExp = (regex: string | undefined) => regex ? new RegExp(regex, 'i') : null;
+const makeRegExp = (regex: string | undefined) => (regex ? new RegExp(regex, 'i') : null);
 const filters = {
   excludeCategoryFilterRegex: makeRegExp(filterConfig.excludeCategoryFilterRegex),
   includeCategoryFilterRegex: makeRegExp(filterConfig.includeCategoryFilterRegex),
@@ -62,7 +63,7 @@ const filteredModules = allModules.filter((tool) => {
 });
 
 export const toolsByCategory = filteredModules.reduce((la, moduleDef) => {
-  let found = la.find(l => l.name === moduleDef.category);
+  let found = la.find((l) => l.name === moduleDef.category);
   if (!found) {
     found = {
       name: moduleDef.category,

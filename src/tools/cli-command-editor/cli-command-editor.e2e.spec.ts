@@ -6,6 +6,6 @@ test.describe('Tool - Cli command editor', () => {
   });
 
   test('Has correct title', async ({ page }) => {
-    await expect(page).toHaveTitle('Cli command editor - IT Tools');
+    await expect(page).toHaveTitle('Cli command editor - sYnTools');
   });
 });

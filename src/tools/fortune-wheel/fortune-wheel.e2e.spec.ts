@@ -6,6 +6,6 @@ test.describe('Tool - Fortune wheel', () => {
   });
 
   test('Has correct title', async ({ page }) => {
-    await expect(page).toHaveTitle('Fortune wheel - IT Tools');
+    await expect(page).toHaveTitle('Fortune wheel - sYnTools');
   });
 });

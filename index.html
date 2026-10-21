@@ -7,7 +7,7 @@
       html { color-scheme: light; }
       html.dark { color-scheme: dark; }
       html, body { background-color: #f1f5f9; }
-      html.dark, html.dark body { background-color: #1c1c1c; }
+      html.dark, html.dark body { background-color: #0B1021; }
     </style>
     <script>
       (function () {
@@ -24,6 +24,7 @@
           } else {
             root.style.setProperty('--vpss-bg-splash', '#f1f5f9');
             root.style.setProperty('--vpss-bg-loader', '#4B6EDF');
+            document.querySelector('meta[name="theme-color"]').setAttribute('content', '#7B9EFF');
           }
         }
         catch (e) {}
@@ -31,27 +32,28 @@
     </script>
     <link rel="icon" href="favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IT Tools - Handy online tools for developers</title>
+    <title>sYnTools - Engineering. Security. Automation.</title>
     <link rel="author" href="humans.txt" />
-    <link rel="canonical" href="https://sharevb-it-tools.vercel.app" />
+    <link rel="canonical" href="https://tools.christran.io" />
 
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#18a058" />
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#7B9EFF" />
 
-    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="msapplication-TileColor" content="#0B1021" />
 
-    <meta property="og:url" content="https://sharevb-it-tools.vercel.app/" />
+    <meta property="og:url" content="https://tools.christran.io/" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://sharevb-it-tools.vercel.app/banner.png?v=2" />
+    <meta property="og:title" content="sYnTools - Engineering. Security. Automation." />
+    <meta property="og:description" content="sYnTools is Chris Tran's self-hosted collection of handy developer and IT utilities at tools.christran.io." />
+    <meta property="og:image" content="https://tools.christran.io/logo.png" />
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@ittoolsdottech" />
-    <meta name="twitter:creator" content="@cthmsst" />
-
-    <meta name="twitter:image" content="https://sharevb-it-tools.vercel.app/banner.png?v=2" />
-    <meta name="twitter:image:alt" content="IT Tools - Handy online tools for developers" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="sYnTools - Engineering. Security. Automation." />
+    <meta name="twitter:description" content="sYnTools is Chris Tran's self-hosted collection of handy developer and IT utilities at tools.christran.io." />
+    <meta name="twitter:image" content="https://tools.christran.io/logo.png" />
+    <meta name="twitter:image:alt" content="sYnTools" />
   </head>
   <body>
     <div id="app"></div>

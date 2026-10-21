@@ -6,7 +6,7 @@ test.describe('Tool - JSON to .env', () => {
   });
 
   test('Has correct title', async ({ page }) => {
-    await expect(page).toHaveTitle('JSON to .env - IT Tools');
+    await expect(page).toHaveTitle('JSON to .env - sYnTools');
   });
 
   test('Provided JSON is converted to .env', async ({ page }) => {

@@ -3,10 +3,9 @@ import { useI18n } from 'vue-i18n';
 import { useScriptTag } from '@vueuse/core';
 import { convert_math } from 'mitex-wasm';
 import { useQueryParam, useQueryParamOrStorage } from '@/composable/queryParams';
+import { appBaseUrl as base } from '@/utils/base-url';
 
 const { t } = useI18n();
-
-const base = import.meta.env.BASE_URL ?? '/';
 
 const { load: loadPlurimath } = useScriptTag(`${base}plurimath/index.js`, undefined, { type: 'module', manual: true });
 
@@ -20,7 +19,11 @@ const formats = [
 
 const source = useQueryParam({ tool: 'math-fmts-conv', name: 'input', defaultValue: '' });
 const sourceFormat = useQueryParamOrStorage({ name: 'src', storageName: 'math-fmts-conv:src', defaultValue: 'latex' });
-const targetFormat = useQueryParamOrStorage({ name: 'target', storageName: 'math-fmts-conv:target', defaultValue: 'mathml' });
+const targetFormat = useQueryParamOrStorage({
+  name: 'target',
+  storageName: 'math-fmts-conv:target',
+  defaultValue: 'mathml',
+});
 const target = computedAsync(async () => {
   const sourceValue = source.value;
   const sourceFormatValue = sourceFormat.value;
@@ -60,8 +63,7 @@ const target = computedAsync(async () => {
           break;
       }
       resolve(result);
-    }
-    catch (e: any) {
+    } catch (e: any) {
       resolve(`# error converting formula: ${e.toString()}`);
     }
   });
@@ -96,7 +98,12 @@ const target = computedAsync(async () => {
     />
 
     <c-card :title="t('tools.math-formats-converter.texts.title-converted-expression')">
-      <textarea-copyable :value="target" :language="targetFormat" word-wrap :download-file-name="`math.${targetFormat}`" />
+      <textarea-copyable
+        :value="target"
+        :language="targetFormat"
+        word-wrap
+        :download-file-name="`math.${targetFormat}`"
+      />
     </c-card>
   </div>
 </template>
