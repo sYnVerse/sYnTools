@@ -5,7 +5,7 @@
   backHome: 返回主页
   page:
     text:
-      page-not-found-it-tools: 页面未找到 - IT-Tools
+      page-not-found-it-tools: Page not found - sYnTools
 about:
   alltools-title: 所有 {toolsCount} 个工具
   tools:
@@ -78,7 +78,8 @@ home:
     favoriteTools: 您收藏的工具
     allTools: 所有工具
     favoritesDndToolTip: 拖放以重新排序收藏
-  subtitle: 开发者实用工具
+  brand: sYnTools
+  subtitle: Engineering. Security. Automation.
   toggleMenu: 切换菜单
   home: 首页
   uiLib: UI 库
@@ -109,7 +110,7 @@ home:
   page:
     text:
       collection-of-handy-online-tools-for-developers-with-great-ux-it-tools-is-a-free-and-open-source-collection-of-handy-online-tools-for-developers-and-people-working-in-it: IT Tools 是一款免费开源的在线工具合集，为开发人员和 IT 从业人员提供便捷的在线工具，拥有出色的用户体验。
-      it-tools-handy-online-tools-for-developers: IT-Tools - 实用的开发者在线工具
+      it-tools-handy-online-tools-for-developers: sYnTools - Engineering. Security. Automation.
 tools:
   crop-image:
     title: 裁剪图片

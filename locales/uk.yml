@@ -5,14 +5,15 @@
   backHome: Повернутися на головну
   page:
     text:
-      page-not-found-it-tools: Сторінку не знайдено – ІТ-інструменти
+      page-not-found-it-tools: Page not found - sYnTools
 home:
   categories:
     newestTools: Найновіші інструменти
     favoriteTools: Ваші улюблені інструменти
     allTools: Усі інструменти
     favoritesDndToolTip: Перетягніть і відпустіть, щоб змінити порядок улюблених
-  subtitle: Зручні інструменти для розробників
+  brand: sYnTools
+  subtitle: Engineering. Security. Automation.
   toggleMenu: Перемикання меню
   home: Головна
   uiLib: UI Бібліотека
@@ -46,7 +47,7 @@ home:
         Колекція зручних онлайн-інструментів для розробників із чудовим UX. IT
         Tools — це безкоштовна колекція зручних онлайн-інструментів з відкритим
         кодом для розробників та людей, які працюють у сфері ІТ.
-      it-tools-handy-online-tools-for-developers: ІТ-інструменти – зручні онлайн-інструменти для розробників
+      it-tools-handy-online-tools-for-developers: sYnTools - Engineering. Security. Automation.
 about:
   alltools-title: Усі інструменти ({toolsCount})
   tools:

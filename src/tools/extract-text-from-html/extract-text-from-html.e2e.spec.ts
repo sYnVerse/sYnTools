@@ -6,7 +6,7 @@ test.describe('Tool - Extract text from html', () => {
   });
 
   test('Has correct title', async ({ page }) => {
-    await expect(page).toHaveTitle('Extract text from HTML - IT Tools');
+    await expect(page).toHaveTitle('Extract text from HTML - sYnTools');
   });
 
   test('Extract text from HTML', async ({ page }) => {

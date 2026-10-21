@@ -6,7 +6,7 @@ test.describe('Tool - JSON to TS', () => {
   });
 
   test('Has correct title', async ({ page }) => {
-    await expect(page).toHaveTitle('JSON to TS - IT Tools');
+    await expect(page).toHaveTitle('JSON to TS - sYnTools');
   });
 
   test('JSON is parsed and outputs clean TS', async ({ page }) => {

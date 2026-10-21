@@ -5,7 +5,7 @@
   backHome: Back home
   page:
     text:
-      page-not-found-it-tools: Page not found - IT Tools
+      page-not-found-it-tools: Page not found - sYnTools
 about:
   alltools-title: All {toolsCount} Tools
   tools:
@@ -35,9 +35,10 @@ about:
     source-label: "Source code (AGPL §13):"
     privacy-heading: Privacy
     privacy-body: >-
-      Most tools process your inputs in the browser. Some optional tools may call
-      an external helper you configure. For how christran.io sites handle hosting
-      and analytics, see the
+      This app does not include analytics or third-party tracking. Most tools
+      process your inputs in the browser. Some optional tools may call an
+      external helper you configure. For how christran.io sites handle hosting,
+      see the
     links-heading: Links
     link-tools: tools.christran.io
     link-site: christran.io
@@ -90,10 +91,9 @@ about:
   error-importing-favorites-e: "Error importing favorites: {0}"
   text:
     collection-of-handy-online-tools-for-developers-with-great-ux-it-tools-is-a-free-and-open-source-collection-of-handy-online-tools-for-developers-and-people-working-in-it:
-      Collection of handy online tools for developers, with great UX. IT Tools
-      is a free and open-source collection of handy online tools for developers
-      & people working in IT.
-    about-it-tools: About - IT Tools
+      sYnTools is Chris Tran's self-hosted collection of handy developer and IT
+      utilities at tools.christran.io — a fork of it-tools.
+    about-it-tools: About - sYnTools
 favoriteButton:
   remove: Remove from favorites
   add: Add to favorites
@@ -126,26 +126,27 @@ home:
     favoriteTools: Your favorite tools
     allTools: All the tools
     favoritesDndToolTip: Drag and drop to reorder favorites
-  subtitle: Handy tools for developers
+  brand: sYnTools
+  subtitle: Engineering. Security. Automation.
   toggleMenu: Toggle menu
   home: Home
   uiLib: UI Lib
-  support: Support IT-Tools development
+  support: Support sYnTools development
   buyMeACoffee: Buy me a coffee
   follow:
-    title: You like it-tools?
+    title: You like sYnTools?
     p1: Give us a star on
-    githubRepository: IT-Tools GitHub repository
+    githubRepository: sYnTools GitHub repository
     p2: or follow us on
-    twitterXAccount: IT-Tools X account
+    twitterXAccount: christran.io on X
     thankYou: Thank you!
   loading-more-tools: Loading more tools...
   nav:
     github: GitHub repository
-    githubRepository: IT-Tools GitHub repository
+    githubRepository: sYnTools GitHub repository
     twitterX: X account
-    twitterXAccount: IT Tools X account
-    about: About  IT-Tools
+    twitterXAccount: christran.io on X
+    about: About sYnTools
     darkMode: Dark mode
     lightMode: Light mode
     mode: Toggle dark/light mode
@@ -160,7 +161,7 @@ home:
         Collection of handy online tools for developers, with great UX. IT Tools
         is a free and open-source collection of handy online tools for
         developers & people working in IT.
-      it-tools-handy-online-tools-for-developers: IT Tools - Handy online tools for developers
+      it-tools-handy-online-tools-for-developers: sYnTools - Engineering. Security. Automation.
 tools:
   crop-image:
     title: Crop image

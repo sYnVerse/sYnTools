@@ -6,7 +6,7 @@ test.describe('Tool - Amortization Calculator', () => {
   });
 
   test('Has correct title', async ({ page }) => {
-    await expect(page).toHaveTitle('Amortization Calculator - IT Tools');
+    await expect(page).toHaveTitle('Amortization Calculator - sYnTools');
   });
 
   test('Calculates amortization schedule with default values', async ({ page }) => {

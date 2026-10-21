@@ -6,7 +6,7 @@
   backHome: Πίσω στο σπίτι
   page:
     text:
-      page-not-found-it-tools: Η σελίδα δεν βρέθηκε - Εργαλεία IT
+      page-not-found-it-tools: Page not found - sYnTools
 about:
   alltools-title: Όλα τα {toolsCount} εργαλεία
   tools:
@@ -96,7 +96,8 @@ home:
     favoriteTools: Τα αγαπημένα σας εργαλεία
     allTools: Όλα τα εργαλεία
     favoritesDndToolTip: Σύρετε και αποθέστε για να αναδιατάξετε τα αγαπημένα
-  subtitle: Χρήσιμα εργαλεία για προγραμματιστές
+  brand: sYnTools
+  subtitle: Engineering. Security. Automation.
   toggleMenu: Εναλλαγή μενού
   home: Σπίτι
   uiLib: Βιβλιοθήκη UI
@@ -131,7 +132,7 @@ home:
         εξαιρετική εμπειρία χρήστη. Το IT Tools είναι μια δωρεάν και ανοιχτού
         κώδικα συλλογή εύχρηστων διαδικτυακών εργαλείων για προγραμματιστές και
         άτομα που εργάζονται στον τομέα της πληροφορικής.
-      it-tools-handy-online-tools-for-developers: Εργαλεία IT - Χρήσιμα διαδικτυακά εργαλεία για προγραμματιστές
+      it-tools-handy-online-tools-for-developers: sYnTools - Engineering. Security. Automation.
 tools:
   crop-image:
     title: Περικοπή εικόνας

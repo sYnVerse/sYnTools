@@ -6,14 +6,15 @@
   backHome: Ar ais abhaile
   page:
     text:
-      page-not-found-it-tools: Leathanach gan aimsiú - Uirlisí TF
+      page-not-found-it-tools: Page not found - sYnTools
 home:
   categories:
     newestTools: Uirlisí is déanaí
     favoriteTools: Na huirlisí is fearr leat
     allTools: Gach na huirlisí
     favoritesDndToolTip: Tarraing agus scaoil chun na ceanáin a athordú
-  subtitle: Uirlisí úsáideacha do fhorbróirí
+  brand: sYnTools
+  subtitle: Engineering. Security. Automation.
   toggleMenu: Scoránaigh roghchlár
   home: Baile
   uiLib: Chomhéadain Lib
@@ -48,7 +49,7 @@ home:
         úsáideora iontach. Is bailiúchán saor in aisce agus foinse oscailte
         d'uirlisí úsáideacha ar líne é IT Tools do fhorbróirí agus do dhaoine
         atá ag obair in TF.
-      it-tools-handy-online-tools-for-developers: Uirlisí TF - Uirlisí úsáideacha ar líne do fhorbróirí
+      it-tools-handy-online-tools-for-developers: sYnTools - Engineering. Security. Automation.
 about:
   alltools-title: Gach uirlis {toolsCount}
   tools:

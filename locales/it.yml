@@ -5,7 +5,7 @@
   backHome: Torna alla home
   page:
     text:
-      page-not-found-it-tools: Pagina non trovata - Strumenti IT
+      page-not-found-it-tools: Page not found - sYnTools
 about:
   alltools-title: Tutti i {toolsCount} strumenti
   tools:
@@ -87,7 +87,8 @@ home:
     favoriteTools: I tuoi strumenti preferiti
     allTools: Tutti gli strumenti
     favoritesDndToolTip: Trascina e rilascia per riordinare i preferiti
-  subtitle: Strumenti utili per sviluppatori
+  brand: sYnTools
+  subtitle: Engineering. Security. Automation.
   toggleMenu: Apri/chiudi menu
   home: Home
   uiLib: Libreria UI
@@ -121,7 +122,7 @@ home:
         Una raccolta di pratici strumenti online per sviluppatori, con un'ottima
         esperienza utente. IT Tools è una raccolta gratuita e open-source di
         strumenti online utili per sviluppatori e professionisti IT.
-      it-tools-handy-online-tools-for-developers: IT Tools - Pratici strumenti online per sviluppatori
+      it-tools-handy-online-tools-for-developers: sYnTools - Engineering. Security. Automation.
 tools:
   crop-image:
     title: Ritaglia immagine

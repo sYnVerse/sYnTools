@@ -6,6 +6,6 @@ test.describe('Tool - Format Converter', () => {
   });
 
   test('Has correct title', async ({ page }) => {
-    await expect(page).toHaveTitle('Format Converter - IT Tools');
+    await expect(page).toHaveTitle('Format Converter - sYnTools');
   });
 });

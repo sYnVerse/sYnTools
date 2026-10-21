@@ -5,7 +5,7 @@
   backHome: वापस घर
   page:
     text:
-      page-not-found-it-tools: पृष्ठ नहीं मिला - आईटी उपकरण
+      page-not-found-it-tools: Page not found - sYnTools
 about:
   alltools-title: सभी {toolsCount} उपकरण
   tools:
@@ -97,7 +97,8 @@ home:
     favoriteTools: आपके पसंदीदा उपकरण
     allTools: सभी उपकरण
     favoritesDndToolTip: पसंदीदा आइटमों को पुनर्व्यवस्थित करने के लिए उन्हें ड्रैग और ड्रॉप करें।
-  subtitle: डेवलपर्स के लिए उपयोगी उपकरण
+  brand: sYnTools
+  subtitle: Engineering. Security. Automation.
   toggleMenu: टॉगल मेनू
   home: घर
   uiLib: यूआई लाइब्रेरी
@@ -131,7 +132,7 @@ home:
         बेहतरीन यूजर एक्सपीरियंस (UX) के साथ डेवलपर्स के लिए उपयोगी ऑनलाइन टूल्स
         का संग्रह। IT टूल्स डेवलपर्स और IT क्षेत्र में काम करने वाले लोगों के
         लिए उपयोगी ऑनलाइन टूल्स का एक निःशुल्क और ओपन-सोर्स संग्रह है।
-      it-tools-handy-online-tools-for-developers: आईटी टूल्स - डेवलपर्स के लिए उपयोगी ऑनलाइन टूल्स
+      it-tools-handy-online-tools-for-developers: sYnTools - Engineering. Security. Automation.
 tools:
   crop-image:
     title: "छवि सुधारें # क्रॉप इमेज फोटो एडिटर"

@@ -33,6 +33,7 @@ describe('tools metadata', () => {
         'crypto-js',
         '@types/crypto-js',
         'plausible-tracker',
+        '@plausible-analytics/tracker',
         'svg2png-wasm',
         '@types/bcryptjs',
         '@types/uuid',

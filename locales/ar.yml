@@ -5,14 +5,15 @@
   backHome: العودة للصفحة الرئيسية
   page:
     text:
-      page-not-found-it-tools: الصفحة غير موجودة - أدوات تكنولوجيا المعلومات
+      page-not-found-it-tools: Page not found - sYnTools
 home:
   categories:
     newestTools: أحدث الأدوات
     favoriteTools: أدواتك المفضلة
     allTools: جميع الأدوات
     favoritesDndToolTip: اسحب وأفلت لإعادة ترتيب المفضلة
-  subtitle: أدوات مفيدة للمطورين
+  brand: sYnTools
+  subtitle: Engineering. Security. Automation.
   toggleMenu: تبديل القائمة
   home: الصفحة الرئيسية
   uiLib: مكتبة واجهة المستخدم
@@ -46,7 +47,7 @@ home:
         مجموعة من الأدوات الإلكترونية المفيدة للمطورين، مع تجربة مستخدم رائعة.
         أدوات تكنولوجيا المعلومات هي مجموعة مجانية ومفتوحة المصدر من الأدوات
         الإلكترونية المفيدة للمطورين والعاملين في مجال تكنولوجيا المعلومات.
-      it-tools-handy-online-tools-for-developers: أدوات تكنولوجيا المعلومات - أدوات مفيدة عبر الإنترنت للمطورين
+      it-tools-handy-online-tools-for-developers: sYnTools - Engineering. Security. Automation.
 about:
   alltools-title: جميع الأدوات {toolsCount}
   tools:

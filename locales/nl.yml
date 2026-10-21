@@ -5,14 +5,15 @@
   backHome: Terug naar home
   page:
     text:
-      page-not-found-it-tools: Pagina niet gevonden - IT-tools
+      page-not-found-it-tools: Page not found - sYnTools
 home:
   categories:
     newestTools: Nieuwste tools
     favoriteTools: Jouw favoriete tools
     allTools: Alle tools
     favoritesDndToolTip: Sleep om favorieten opnieuw te ordenen
-  subtitle: Handige tools voor ontwikkelaars
+  brand: sYnTools
+  subtitle: Engineering. Security. Automation.
   toggleMenu: Menu in-/uitklappen
   home: Home
   uiLib: UI-bibliotheek
@@ -46,7 +47,7 @@ home:
         Een verzameling handige online tools voor ontwikkelaars, met een
         geweldige gebruikerservaring. IT Tools is een gratis en open-source
         verzameling handige online tools voor ontwikkelaars en IT-professionals.
-      it-tools-handy-online-tools-for-developers: IT-tools - Handige online tools voor ontwikkelaars
+      it-tools-handy-online-tools-for-developers: sYnTools - Engineering. Security. Automation.
 favoriteButton:
   remove: Verwijder uit favorieten
   add: Voeg toe aan favorieten

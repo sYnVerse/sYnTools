@@ -6,7 +6,7 @@ test.describe('Tool - Text to UTF-8 binary', () => {
   });
 
   test('Has correct title', async ({ page }) => {
-    await expect(page).toHaveTitle('Text to UTF-8 binary - IT Tools');
+    await expect(page).toHaveTitle('Text to UTF-8 binary - sYnTools');
   });
 
   test('Text to binary conversion', async ({ page }) => {

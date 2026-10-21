@@ -20,7 +20,7 @@ test.describe('Date time converter', () => {
   });
 
   test('Has correct title', async ({ page }) => {
-    await expect(page).toHaveTitle('Date-time converter - IT Tools');
+    await expect(page).toHaveTitle('Date-time converter - sYnTools');
   });
 
   test('Format is auto detected from a date and the date is correctly converted', async ({ page }) => {

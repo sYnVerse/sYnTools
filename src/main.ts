@@ -8,7 +8,6 @@ import { installAbortSignalPolyfill } from 'abort-signal-polyfill';
 import { hideSplashScreen } from 'vite-plugin-splash-screen/runtime';
 
 import shadow from 'vue-shadow-dom';
-import { plausible } from './plugins/plausible.plugin';
 import { appBaseUrl } from '@/utils/base-url';
 import '@/utils/json5-bigint';
 import '@/utils/json5-bignum';
@@ -93,7 +92,6 @@ app.use(createHead());
 app.use(i18nPlugin);
 app.use(router);
 app.use(naive);
-app.use(plausible);
 app.use(shadow);
 app.use(store, 'pomodoro-store');
 app.use(Vue3Katex);

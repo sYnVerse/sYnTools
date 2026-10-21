@@ -6,7 +6,7 @@ test.describe('Tool - Markdown Diff', () => {
   });
 
   test('Has correct title', async ({ page }) => {
-    await expect(page).toHaveTitle('Markdown Diff - IT Tools');
+    await expect(page).toHaveTitle('Markdown Diff - sYnTools');
   });
 
   test('Diff editor is visible with two editable panes', async ({ page }) => {

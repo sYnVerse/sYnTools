@@ -6,7 +6,7 @@ test.describe('Tool - CSV to JSON', () => {
   });
 
   test('Has correct title', async ({ page }) => {
-    await expect(page).toHaveTitle('CSV to JSON - IT Tools');
+    await expect(page).toHaveTitle('CSV to JSON - sYnTools');
   });
 
   test('Provided csv is converted to json', async ({ page }) => {

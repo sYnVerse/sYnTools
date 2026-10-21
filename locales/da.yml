@@ -5,14 +5,15 @@
   backHome: Tilbage hjem
   page:
     text:
-      page-not-found-it-tools: Siden blev ikke fundet - IT-værktøjer
+      page-not-found-it-tools: Page not found - sYnTools
 home:
   categories:
     newestTools: Nyeste værktøjer
     favoriteTools: Dine favorit værktøjer
     allTools: Alle værktøjerne
     favoritesDndToolTip: Træk og slip for at omarrangere favoritter
-  subtitle: Handy værktøjer for udviklere
+  brand: sYnTools
+  subtitle: Engineering. Security. Automation.
   toggleMenu: Åben/luk menu
   home: Hjem
   uiLib: UI Bibliotek
@@ -47,7 +48,7 @@ home:
         brugeroplevelse. IT Tools er en gratis og open source-samling af
         praktiske onlineværktøjer til udviklere og folk, der arbejder inden for
         IT.
-      it-tools-handy-online-tools-for-developers: IT-værktøjer - Praktiske onlineværktøjer til udviklere
+      it-tools-handy-online-tools-for-developers: sYnTools - Engineering. Security. Automation.
 favoriteButton:
   remove: Fjern fra favoritter
   add: Tilføj til favoritter

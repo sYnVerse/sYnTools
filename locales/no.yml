@@ -6,14 +6,15 @@
   backHome: Tilbake til start
   page:
     text:
-      page-not-found-it-tools: Siden ble ikke funnet – IT-verktøy
+      page-not-found-it-tools: Page not found - sYnTools
 home:
   categories:
     newestTools: Nyeste verktøy
     favoriteTools: Dine favoritt verktøy
     allTools: Alle verktøyene
     favoritesDndToolTip: Dra og slipp for å omordne favoritter
-  subtitle: Nyttige verktøy for utviklere
+  brand: sYnTools
+  subtitle: Engineering. Security. Automation.
   toggleMenu: Vekslemenmy
   home: Hjem
   uiLib: UI Bib
@@ -47,7 +48,7 @@ home:
         Samling av nyttige nettverktøy for utviklere, med flott
         brukeropplevelse. IT Tools er en gratis og åpen kildekode-samling av
         nyttige nettverktøy for utviklere og folk som jobber innen IT.
-      it-tools-handy-online-tools-for-developers: IT-verktøy – nyttige nettverktøy for utviklere
+      it-tools-handy-online-tools-for-developers: sYnTools - Engineering. Security. Automation.
 about:
   alltools-title: Alle {toolsCount} verktøy
   tools:

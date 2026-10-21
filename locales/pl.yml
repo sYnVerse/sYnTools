@@ -5,14 +5,15 @@
   backHome: Powrót na stronę główną
   page:
     text:
-      page-not-found-it-tools: Strona nie znaleziona - Narzędzia IT
+      page-not-found-it-tools: Page not found - sYnTools
 home:
   categories:
     newestTools: Najnowsze narzędzia
     favoriteTools: Twoje ulubione narzędzia
     allTools: Wszystkie narzędzia
     favoritesDndToolTip: Przeciągnij i upuść, aby zmienić kolejność ulubionych
-  subtitle: Narzędzia dla programistów
+  brand: sYnTools
+  subtitle: Engineering. Security. Automation.
   toggleMenu: Menu
   home: Strona główna
   uiLib: Biblioteka interfejsu użytkownika
@@ -46,7 +47,7 @@ home:
         Zbiór przydatnych narzędzi online dla programistów, z doskonałym UX. IT
         Tools to darmowy i otwarty zbiór przydatnych narzędzi online dla
         programistów i osób pracujących w IT.
-      it-tools-handy-online-tools-for-developers: Narzędzia IT – praktyczne narzędzia online dla programistów
+      it-tools-handy-online-tools-for-developers: sYnTools - Engineering. Security. Automation.
 about:
   alltools-title: Wszystkie narzędzia {toolsCount}
   tools:

@@ -6,14 +6,15 @@
   backHome: Zurück zur Startseite
   page:
     text:
-      page-not-found-it-tools: Seite nicht gefunden – IT-Tools
+      page-not-found-it-tools: Page not found - sYnTools
 home:
   categories:
     newestTools: Neueste Tools
     favoriteTools: Deine Lieblingstools
     allTools: Alle Tools
     favoritesDndToolTip: Drag and Drop, um Favoriten neu zu ordnen
-  subtitle: Praktische Tools für Entwickler
+  brand: sYnTools
+  subtitle: Engineering. Security. Automation.
   toggleMenu: Menü umschalten
   home: Startseite
   uiLib: UI-Bibliothek
@@ -48,7 +49,7 @@ home:
         Online-Tools für Entwickler und IT-Fachkräfte. Sie bietet eine
         hervorragende Benutzererfahrung und eignet sich ideal für Entwickler und
         IT-Mitarbeiter.
-      it-tools-handy-online-tools-for-developers: IT-Tools – Praktische Online-Tools für Entwickler
+      it-tools-handy-online-tools-for-developers: sYnTools - Engineering. Security. Automation.
 about:
   alltools-title: Alle {toolsCount} Werkzeuge
   tools:

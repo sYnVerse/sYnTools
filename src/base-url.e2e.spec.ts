@@ -116,7 +116,7 @@ test.describe('Deployment under a subfolder', () => {
 
     await page.goto(`${origin}${BASE_URL}`);
 
-    await expect(page).toHaveTitle(/IT Tools/);
+    await expect(page).toHaveTitle(/sYnTools/);
     // Router links carry the subfolder, so navigating inside the app stays inside it.
     await expect(page.locator(`a[href^="${BASE_URL}"]`).first()).toBeVisible();
     expect(notFound).toEqual([]);
@@ -128,7 +128,7 @@ test.describe('Deployment under a subfolder', () => {
     // `<base href>` the server injected.
     await page.goto(`${origin}${BASE_URL}json-to-yaml-converter`);
 
-    await expect(page).toHaveTitle('JSON to YAML converter - IT Tools');
+    await expect(page).toHaveTitle('JSON to YAML converter - sYnTools');
 
     // Reaching the tool at all means its lazily imported chunk was resolved correctly.
     await page.getByTestId('input').fill('{"foo":"bar"}');

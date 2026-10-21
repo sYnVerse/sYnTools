@@ -169,14 +169,15 @@ export default defineConfig({
       // from the app root -- so the manifest, like the rest of the build, does not need to
       // know where that root is.
       manifest: {
-        name: 'IT Tools',
-        description: 'Aggregated set of useful tools for developers.',
+        name: 'sYnTools',
+        short_name: 'sYnTools',
+        description: 'Engineering. Security. Automation. — Chris Tran\'s self-hosted IT tools at tools.christran.io.',
         display: 'standalone',
         start_url: './?utm_source=pwa&utm_medium=pwa',
         scope: './',
         orientation: 'any',
-        theme_color: '#18a058',
-        background_color: '#f1f5f9',
+        theme_color: '#0B1021',
+        background_color: '#0B1021',
         icons: [
           {
             src: './favicon-16x16.png',

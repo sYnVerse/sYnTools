@@ -5,14 +5,15 @@
   backHome: Quay về trang chủ
   page:
     text:
-      page-not-found-it-tools: Trang không tìm thấy - Công cụ CNTT
+      page-not-found-it-tools: Page not found - sYnTools
 home:
   categories:
     newestTools: Công cụ mới nhất
     favoriteTools: Công cụ yêu thích của bạn
     allTools: Tất cả công cụ
     favoritesDndToolTip: Kéo thả để sắp xếp lại yêu thích
-  subtitle: Công cụ cho nhà phát triển.
+  brand: sYnTools
+  subtitle: Engineering. Security. Automation.
   toggleMenu: Chuyển đổi menu
   home: Trang chủ
   uiLib: Thư viện UI
@@ -47,7 +48,7 @@ home:
         trải nghiệm người dùng tuyệt vời. IT Tools là một bộ sưu tập miễn phí và
         mã nguồn mở các công cụ trực tuyến tiện dụng dành cho nhà phát triển và
         những người làm việc trong lĩnh vực CNTT.
-      it-tools-handy-online-tools-for-developers: Công cụ CNTT - Các công cụ trực tuyến tiện dụng dành cho nhà phát triển
+      it-tools-handy-online-tools-for-developers: sYnTools - Engineering. Security. Automation.
 about:
   alltools-title: Tất cả {toolsCount} Công cụ
   tools:

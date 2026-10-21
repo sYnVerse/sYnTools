@@ -6,14 +6,15 @@
   backHome: Volver al inicio
   page:
     text:
-      page-not-found-it-tools: Página no encontrada - Herramientas informáticas
+      page-not-found-it-tools: Page not found - sYnTools
 home:
   categories:
     newestTools: Nuevas herramientas
     favoriteTools: Tus herramientas favoritas
     allTools: Todas las herramientas
     favoritesDndToolTip: Arrastra y suelta para reordenar favoritos
-  subtitle: Herramientas practicas para desarrolladores
+  brand: sYnTools
+  subtitle: Engineering. Security. Automation.
   toggleMenu: Alternar menú
   home: Inicio
   uiLib: Biblioteca de interfaz de usuario
@@ -48,7 +49,7 @@ home:
         excelente experiencia de usuario. IT Tools es una colección gratuita y
         de código abierto de útiles herramientas online para desarrolladores y
         profesionales de TI.
-      it-tools-handy-online-tools-for-developers: "Herramientas informáticas:
+      it-tools-handy-online-tools-for-developers: sYnTools - Engineering. Security. Automation.
         prácticas herramientas en línea para desarrolladores"
 about:
   alltools-title: Todas las {toolsCount} herramientas

@@ -309,9 +309,6 @@ importers:
       '@noble/curves':
         specifier: ^2.4.0
         version: 2.4.0
-      '@plausible-analytics/tracker':
-        specifier: ^0.4.6
-        version: 0.4.6
       '@regexper/render':
         specifier: ^1.0.0
         version: 1.0.0
@@ -3864,9 +3861,6 @@ packages:
 
   '@peculiar/utils@2.0.3':
     resolution: {integrity: sha512-+oL3HPFRIZ1St2K50lWCXiioIgSoxzz7R1J3uF6neO2yl1sgmpgY6XXJH4BdpoDkMWznQTeYF6oWNDZLCdQ4eQ==}
-
-  '@plausible-analytics/tracker@0.4.6':
-    resolution: {integrity: sha512-nbu6xGgSP6jeYuoVklZBzucUnIpo75tVu3Kr+R0EDycVKaMC/jF5Q/YCaM/8gR4fPZ1IDcXt6FdBJFZ1uZwEPA==}
 
   '@playwright/test@1.64.1':
     resolution: {integrity: sha512-IaYGml/nSOiZWROfPtuIL7neuu9qDOZ3TNvNljUIrhDMxiGTgPjzj/g9p9RxpS2tSepPDRY+UwAaEeiKtUvIAg==}
@@ -14356,8 +14350,6 @@ snapshots:
   '@peculiar/utils@2.0.3':
     dependencies:
       tslib: 2.8.1
-
-  '@plausible-analytics/tracker@0.4.6': {}
 
   '@playwright/test@1.64.1':
     dependencies:

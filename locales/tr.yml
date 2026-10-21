@@ -6,14 +6,15 @@
   backHome: Ev'e geri dön
   page:
     text:
-      page-not-found-it-tools: Sayfa bulunamadı - BT Araçları
+      page-not-found-it-tools: Page not found - sYnTools
 home:
   categories:
     newestTools: En yeni Araçlar
     favoriteTools: Favori Araçların
     allTools: Bütün Araçlar
     favoritesDndToolTip: Favorileri yeniden sıralamak için sürükle ve bırak
-  subtitle: Geliştiriciler için kullanışlı araçlar
+  brand: sYnTools
+  subtitle: Engineering. Security. Automation.
   toggleMenu: Menüyü Aç-Kapa
   home: Ev
   uiLib: UI Kütüphanesi
@@ -48,7 +49,7 @@ home:
         çevrimiçi araçlar koleksiyonu. BT Araçları, geliştiriciler ve BT
         alanında çalışanlar için kullanışlı çevrimiçi araçlardan oluşan ücretsiz
         ve açık kaynaklı bir koleksiyondur.
-      it-tools-handy-online-tools-for-developers: BT Araçları - Geliştiriciler için kullanışlı çevrimiçi araçlar
+      it-tools-handy-online-tools-for-developers: sYnTools - Engineering. Security. Automation.
 favoriteButton:
   remove: Favorilerden kaldır
   add: Favorilere ekle

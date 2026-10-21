@@ -4,7 +4,6 @@ import Menu2 from '~icons/tabler/menu-2';
 import { NIcon, useThemeVars } from 'naive-ui';
 import { storeToRefs } from 'pinia';
 import { RouterLink } from 'vue-router';
-import HeroGradient from '../assets/hero-gradient.svg?component';
 import MenuLayout from '../components/MenuLayout.vue';
 import NavbarButtons from '../components/NavbarButtons.vue';
 import CollapsibleToolMenu from '@/components/CollapsibleToolMenu.vue';
@@ -43,9 +42,12 @@ const tools = computed<ToolCategory[]>(() => [
   <MenuLayout class="menu-layout" :class="{ isSmallScreen: styleStore.isSmallScreen }">
     <template #sider>
       <RouterLink to="/" class="hero-wrapper">
-        <HeroGradient class="gradient" />
+        <div class="hero-bg" aria-hidden="true" />
         <div class="text-wrapper">
-          <div class="title">IT - TOOLS</div>
+          <div class="brand-row">
+            <img class="brand-mark" src="/syntools-mark.svg" width="36" height="36" alt="" />
+            <div class="title">{{ $t('home.brand') }}</div>
+          </div>
           <div class="divider" />
           <div class="subtitle">
             {{ $t('home.subtitle') }}
@@ -62,7 +64,7 @@ const tools = computed<ToolCategory[]>(() => [
 
         <div class="footer">
           <div>
-            IT-Tools
+            {{ $t('home.brand') }}
 
             <c-link target="_blank" rel="noopener" href="https://github.com/sYnVerse/sYnTools/tree/sYn-local-config">
               v{{ version }}
@@ -139,8 +141,6 @@ const tools = computed<ToolCategory[]>(() => [
         <div>
           <NavbarButtons v-if="!styleStore.isSmallScreen" />
         </div>
-
-
       </div>
       <!-- Positioned wrapper so the route-change loading overlay (see router.ts)
            can cover just the page, leaving the nav bar and menu visible. -->
@@ -152,30 +152,6 @@ const tools = computed<ToolCategory[]>(() => [
 </template>
 
 <style lang="less" scoped>
-// ::v-deep(.n-layout-scroll-container) {
-//     @percent: 4%;
-//     @position: 25px;
-//     @size: 50px;
-//     @color: #eeeeee25;
-//     background-image: radial-gradient(@color @percent, transparent @percent),
-//         radial-gradient(@color @percent, transparent @percent);
-//     background-position: 0 0, @position @position;
-//     background-size: @size @size;
-// }
-
-.support-button {
-  background: rgb(37, 99, 108);
-  background: linear-gradient(48deg, rgba(37, 99, 108, 1) 0%, rgba(59, 149, 111, 1) 60%, rgba(20, 160, 88, 1) 100%);
-  color: #fff !important;
-  transition: padding ease 0.2s !important;
-
-  &:hover {
-    color: #fff;
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-}
-
 .footer {
   text-align: center;
   color: #838587;
@@ -188,7 +164,6 @@ const tools = computed<ToolCategory[]>(() => [
   padding-bottom: 50px;
 
   @media (max-width: 700px) {
-    // The hero block above provides the symmetric 24px gap
     padding-top: 0;
   }
 }
@@ -197,15 +172,11 @@ const tools = computed<ToolCategory[]>(() => [
   position: relative;
 }
 
-// Mobile: the top bar stays visible while scrolling, and the full-width menu
-// (see MenuLayout.vue) opens right under it.
 .navbar {
   @media (max-width: 700px) {
     position: sticky;
     top: 0;
     z-index: 20;
-    // Bleed over the scroll container's 13px padding so content scrolls
-    // under an opaque, full-width bar.
     margin: -13px -13px 13px;
     padding: 13px;
     background-color: v-bind('themeVars.bodyColor');
@@ -213,6 +184,10 @@ const tools = computed<ToolCategory[]>(() => [
 }
 
 .hero-wrapper {
+  --syn-hero-bg: #0b1021;
+  --syn-hero-accent: #7b9eff;
+  --syn-hero-text: #f4f7ff;
+
   position: sticky;
   display: flex;
   top: 0;
@@ -221,14 +196,23 @@ const tools = computed<ToolCategory[]>(() => [
   height: 125px;
   overflow: hidden;
   width: inherit;
+  text-decoration: none;
 
-  .gradient {
+  .hero-bg {
     position: absolute;
-    top: 0;
+    inset: 0;
+    background:
+      linear-gradient(160deg, #0b1021 0%, #121a33 55%, #1a2748 100%);
+  }
+
+  .hero-bg::after {
+    content: '';
+    position: absolute;
     left: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
+    right: 0;
+    bottom: 0;
+    height: 36%;
+    background: linear-gradient(180deg, transparent, rgba(123, 158, 255, 0.16));
   }
 
   .text-wrapper {
@@ -236,40 +220,68 @@ const tools = computed<ToolCategory[]>(() => [
     left: 0;
     width: 100%;
     text-align: center;
-    top: 16px;
-    color: #fff;
+    top: 18px;
+    color: var(--syn-hero-text);
+    padding: 0 12px;
+  }
 
-    .title {
-      font-size: 25px;
-      font-weight: 600;
+  .brand-row {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .brand-mark {
+    width: 36px;
+    height: 36px;
+    border-radius: 9px;
+    display: block;
+    flex: none;
+  }
+
+  .title {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    color: var(--syn-hero-accent);
+  }
+
+  .divider {
+    width: 50px;
+    height: 2px;
+    border-radius: 4px;
+    background-color: var(--syn-hero-accent);
+    margin: 8px auto 6px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+    line-height: 1.35;
+    opacity: 0.92;
+    color: var(--syn-hero-text);
+  }
+
+  // Light theme: softer navy panel so the accent still reads as brand-first.
+  :root:not(.dark) & {
+    --syn-hero-bg: #e8eefc;
+    --syn-hero-text: #0b1021;
+
+    .hero-bg {
+      background: linear-gradient(160deg, #e8eefc 0%, #d7e2fb 55%, #c5d4f7 100%);
     }
 
-    .divider {
-      width: 50px;
-      height: 2px;
-      border-radius: 4px;
-      background-color: v-bind('themeVars.primaryColor');
-      margin: 0 auto 5px;
-    }
-
-    .subtitle {
-      font-size: 16px;
+    .hero-bg::after {
+      background: linear-gradient(180deg, transparent, rgba(123, 158, 255, 0.22));
     }
   }
 
-  // Mobile: seamless full-width menu — no green hero gradient, text follows
-  // the theme, and the header scrolls with the menu. Placed after the base
-  // rules above so these override them (same specificity, later source order).
   @media (max-width: 700px) {
     position: static;
     height: auto;
-    // Symmetric spacing above and below the title block (sider-content's
-    // top padding is removed on mobile to keep the bottom gap equal)
     padding: 24px 0;
-    // The hero is a router link; keep the plain-text look without the gradient
-    text-decoration: none;
 
-    .gradient {
+    .hero-bg {
       display: none;
     }
 
@@ -277,6 +289,14 @@ const tools = computed<ToolCategory[]>(() => [
       position: static;
       padding-top: 0;
       color: v-bind('themeVars.textColor1');
+    }
+
+    .title {
+      color: #7b9eff;
+    }
+
+    .subtitle {
+      color: v-bind('themeVars.textColor2');
     }
   }
 }

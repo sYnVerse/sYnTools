@@ -6,14 +6,15 @@
   backHome: Retour à l'accueil
   page:
     text:
-      page-not-found-it-tools: Page introuvable - Outils informatiques
+      page-not-found-it-tools: Page not found - sYnTools
 home:
   categories:
     newestTools: Les nouveaux outils
     favoriteTools: Vos outils favoris
     allTools: Tous les outils
     favoritesDndToolTip: Faites glisser et déposez pour réordonner vos favoris
-  subtitle: Outils pour les développeurs
+  brand: sYnTools
+  subtitle: Engineering. Security. Automation.
   toggleMenu: Menu
   home: Accueil
   uiLib: Bibliothèque d&#39;interface utilisateur
@@ -48,7 +49,7 @@ home:
         développeurs, offrant une excellente expérience utilisateur. Cette
         collection gratuite et open source propose des outils en ligne pratiques
         destinés aux développeurs et aux professionnels de l'informatique.
-      it-tools-handy-online-tools-for-developers: Outils informatiques - Outils en ligne pratiques pour les développeurs
+      it-tools-handy-online-tools-for-developers: sYnTools - Engineering. Security. Automation.
 about:
   alltools-title: Tous les outils {outils}
   tools:
