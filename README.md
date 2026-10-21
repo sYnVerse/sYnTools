@@ -389,4 +389,4 @@ Local installation required installing first: `python3 make g++`
 
 ## License
 
-This project is under the [GNU GPLv3](LICENSE).
+This project (the combined work and Chris Tran / sYnVerse modifications) is licensed under [AGPL-3.0-or-later](LICENSE). It is a fork of [CorentinTh/it-tools](https://github.com/CorentinTh/it-tools) (via [sharevb/it-tools](https://github.com/sharevb/it-tools)); upstream code remains under GPL-3.0 and is combined under GPLv3 section 13. See [NOTICE](NOTICE) for details.

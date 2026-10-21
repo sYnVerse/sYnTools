@@ -72,7 +72,7 @@ about:
     cheapann tú a d'fhéadfadh a bheith úsáideach dóibh freisin agus ná déan
     dearmad é a leabharmharcáil i do bharra aicearra!
 
-    Is foinse oscailte é Uirlisí TF (faoin gceadúnas GPL-3.0) agus saor in
+    Is foinse oscailte é Uirlisí TF (faoin gceadúnas AGPL-3.0-or-later) agus saor in
     aisce, agus beidh sé i gcónaí. Más mian leat tacú le mo chuid oibre ar an
     bhforc seo, agus mé a spreagadh chun níos mó uirlisí nó feidhmiúlachtaí a
     chur leis, smaoinigh ar thacaíocht a thabhairt trí [urraíocht a dhéanamh
@@ -132,26 +132,6 @@ formatTransformer:
   viewer: Amharcóir
 tools:
   crop-image:
-<<<<<<< HEAD
-    title: "Ríomhairigh íomhá"
-    description: "Ríomhairigh, athraigh méid, agus rothlaigh íomhánna le dathanna cúlra saincheaptha."
-    texts:
-      drag-drop: "Tarraing agus scaoil d'íomhá anseo, nó cliceáil chun brabhsáil"
-      drag-hint: "Tarraing chun suíomh a shocrú • Scrollaigh chun zúmáil ({zoom}%)"
-      flip-h: "Smeach H"
-      flip-v: "Smeach V"
-      reset: "Athshocraigh"
-      fit: "Feistigh"
-      change-image: "Athraigh Íomhá"
-      aspect-ratio: "Cóimheas Gné:"
-      custom-ratio: "Cóimheas Saincheaptha:"
-      background-color: "Dath Cúlra:"
-      transparent: "Trédhearcach"
-      zoom-image: "Zúmáil Íomhá:"
-      rotate-image: "Rothlaigh Íomhá:"
-      rule-of-thirds-grid: "Greille Riail na dTríonóidí:"
-      export-settings: "Socruithe Easpórtála"
-=======
     title: Ríomhairigh íomhá
     description: Ríomhairigh, athraigh méid, agus rothlaigh íomhánna le dathanna
       cúlra saincheaptha.
@@ -171,24 +151,10 @@ tools:
       rotate-image: "Rothlaigh Íomhá:"
       rule-of-thirds-grid: "Greille Riail na dTríonóidí:"
       export-settings: Socruithe Easpórtála
->>>>>>> sharevb/chore/all-my-stuffs
       export-format: "Formáid Easpórtála:"
       image-quality: "Cáilíocht Íomhá:"
       export-width: "Leithead Easpórtála:"
       custom-width: "Leithead Saincheaptha (px):"
-<<<<<<< HEAD
-      export-download-image: "Easpórtáil & Íoslódáil Íomhá Ríofa"
-      ratio-square: "1:1 (Cearnóg)"
-      ratio-widescreen: "16:9 (Scáileán Leathan)"
-      ratio-portrait: "9:16 (Portráid)"
-      ratio-standard: "4:3 (Caighdeánach)"
-      ratio-photo: "3:2 (Grianghraf)"
-      ratio-original: "Cóimheas Gné Bunaidh"
-      ratio-custom: "Cóimheas Saincheaptha"
-      width-original: "Méid Ríofa Bunaidh"
-      width-viewport: "Méid an Réimse Amhairc"
-      width-custom: "Leithead Saincheaptha"
-=======
       export-download-image: Easpórtáil & Íoslódáil Íomhá Ríofa
       ratio-square: 1:1 (Cearnóg)
       ratio-widescreen: 16:9 (Scáileán Leathan)
@@ -203,7 +169,6 @@ tools:
       label-png: PNG
       label-jpeg: JPEG
       label-webp: WebP
->>>>>>> sharevb/chore/all-my-stuffs
   categories:
     favorite-tools: Is fearr leat na hairíonna
     crypto: Cripteagrafaíocht

@@ -26,7 +26,7 @@ about:
     倾情打造，并由 ShareVB 进行扩展，汇集了开发者和 IT
     工作者所需的实用工具。如果您觉得它有用，请分享给您认为可能也会有用的人，别忘了将其添加到您的快捷方式栏中！
 
-    IT Tools 是开源的（遵循 GPL-3.0 许可证），并且永远免费。如果您想支持我在此分支上的工作，并鼓励我添加更多工具或功能，请考虑通过
+    IT Tools 是开源的（遵循 AGPL-3.0-or-later 许可证），并且永远免费。如果您想支持我在此分支上的工作，并鼓励我添加更多工具或功能，请考虑通过
     [赞助我](https://www.buymeacoffee.com/sharevb) 来支持。
 
     ## 技术
@@ -112,26 +112,6 @@ home:
       it-tools-handy-online-tools-for-developers: IT 工具 - 方便的在线开发人员工具
 tools:
   crop-image:
-<<<<<<< HEAD
-    title: "裁剪图片"
-    description: "使用自定义背景颜色裁剪、调整大小和旋转图像."
-    texts:
-      drag-drop: "拖放您的图片到这里，或点击浏览"
-      drag-hint: "拖动以调整位置 • 滚动以缩放 ({zoom}%)"
-      flip-h: "水平翻转"
-      flip-v: "垂直翻转"
-      reset: "重置"
-      fit: "适应"
-      change-image: "更换图片"
-      aspect-ratio: "宽高比:"
-      custom-ratio: "自定义比例:"
-      background-color: "背景颜色:"
-      transparent: "透明"
-      zoom-image: "缩放图片:"
-      rotate-image: "旋转图片:"
-      rule-of-thirds-grid: "三分法则网格:"
-      export-settings: "导出设置"
-=======
     title: 裁剪图片
     description: 使用自定义背景颜色裁剪、调整大小和旋转图像.
     texts:
@@ -150,24 +130,10 @@ tools:
       rotate-image: "旋转图片:"
       rule-of-thirds-grid: "三分法则网格:"
       export-settings: 导出设置
->>>>>>> sharevb/chore/all-my-stuffs
       export-format: "导出格式:"
       image-quality: "图片质量:"
       export-width: "导出宽度:"
       custom-width: "自定义宽度 (px):"
-<<<<<<< HEAD
-      export-download-image: "导出并下载裁剪后的图片"
-      ratio-square: "1:1 (正方形)"
-      ratio-widescreen: "16:9 (宽屏)"
-      ratio-portrait: "9:16 (肖像/竖屏)"
-      ratio-standard: "4:3 (标准)"
-      ratio-photo: "3:2 (照片)"
-      ratio-original: "原始宽高比"
-      ratio-custom: "自定义比例"
-      width-original: "原始裁剪大小"
-      width-viewport: "视口大小"
-      width-custom: "自定义宽度"
-=======
       export-download-image: 导出并下载裁剪后的图片
       ratio-square: 1:1 (正方形)
       ratio-widescreen: 16:9 (宽屏)
@@ -182,7 +148,6 @@ tools:
       label-png: PNG
       label-jpeg: JPEG
       label-webp: WebP
->>>>>>> sharevb/chore/all-my-stuffs
   chronometer:
     title: 秒表
     description: 监测某事物的持续时间。基本上是一个具备简单计时功能的秒表。

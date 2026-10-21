@@ -68,7 +68,7 @@ about:
     إذا وجدته مفيدًا، فلا تتردد في مشاركته مع من تعتقد أنه قد يفيدك أيضًا، ولا
     تنسَ حفظه في شريط الاختصارات!
 
-    أدوات تكنولوجيا المعلومات مفتوحة المصدر (تحت رخصة GPL-3.0) ومجانية، وستظل
+    أدوات تكنولوجيا المعلومات مفتوحة المصدر (تحت رخصة AGPL-3.0-or-later) ومجانية، وستظل
     كذلك دائمًا. إذا كنت ترغب في دعم عملي على هذه النسخة، وتشجيعي على إضافة
     المزيد من الأدوات أو الوظائف، ففكر في دعمي من خلال
     [رعايتي](https://www.buymeacoffee.com/sharevb).
@@ -109,26 +109,6 @@ search:
   placeholder: اكتب للبحث عن أداة أو أمر...
 tools:
   crop-image:
-<<<<<<< HEAD
-    title: "قص الصورة"
-    description: "قم بقص الصور وتغيير حجمها وتدويرها باستخدام ألوان خلفية مخصصة."
-    texts:
-      drag-drop: "اسحب وأسقط صورتك هنا، أو انقر للتصفح"
-      drag-hint: "اسحب للتحريك • مرر للتكبير ({zoom}%)"
-      flip-h: "انعكاس أفقي"
-      flip-v: "انعكاس رأسي"
-      reset: "إعادة تعيين"
-      fit: "ملائمة"
-      change-image: "تغيير الصورة"
-      aspect-ratio: "نسبة الارتفاع إلى العرض:"
-      custom-ratio: "نسبة مخصصة:"
-      background-color: "لون الخلفية:"
-      transparent: "شفاف"
-      zoom-image: "تكبير الصورة:"
-      rotate-image: "تدوير الصورة:"
-      rule-of-thirds-grid: "شبكة قاعدة الأثلاث:"
-      export-settings: "إعدادات التصدير"
-=======
     title: قص الصورة
     description: قم بقص الصور وتغيير حجمها وتدويرها باستخدام ألوان خلفية مخصصة.
     texts:
@@ -147,24 +127,10 @@ tools:
       rotate-image: "تدوير الصورة:"
       rule-of-thirds-grid: "شبكة قاعدة الأثلاث:"
       export-settings: إعدادات التصدير
->>>>>>> sharevb/chore/all-my-stuffs
       export-format: "صيغة التصدير:"
       image-quality: "جودة الصورة:"
       export-width: "عرض التصدير:"
       custom-width: "العرض المخصص (بكسل):"
-<<<<<<< HEAD
-      export-download-image: "تصدير وتنزيل الصورة المقصوصة"
-      ratio-square: "1:1 (مربع)"
-      ratio-widescreen: "16:9 (شاشة عريضة)"
-      ratio-portrait: "9:16 (عمودي)"
-      ratio-standard: "4:3 (قياسي)"
-      ratio-photo: "3:2 (صورة)"
-      ratio-original: "نسبة العرض إلى الارتفاع الأصلية"
-      ratio-custom: "نسبة مخصصة"
-      width-original: "حجم القص الأصلي"
-      width-viewport: "حجم نافذة العرض"
-      width-custom: "عرض مخصص"
-=======
       export-download-image: تصدير وتنزيل الصورة المقصوصة
       ratio-square: 1:1 (مربع)
       ratio-widescreen: 16:9 (شاشة عريضة)
@@ -179,7 +145,6 @@ tools:
       label-png: PNG
       label-jpeg: JPEG
       label-webp: WebP
->>>>>>> sharevb/chore/all-my-stuffs
   categories:
     favorite-tools: أدواتك المفضلة
     crypto: التشفير

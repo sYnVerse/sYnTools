@@ -13,9 +13,17 @@
       (function () {
         try {
           var mode = localStorage.getItem('vueuse-color-scheme') || 'auto';
-          if (mode === 'dark' || (mode === 'auto' && matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
-            document.querySelector('meta[name="theme-color"]').setAttribute('content', '#1c1c1c');
+          var dark = mode === 'dark' || (mode === 'auto' && matchMedia('(prefers-color-scheme: dark)').matches);
+          var root = document.documentElement;
+          // Splash colors from christran.io brand tokens (set before splash paints).
+          if (dark) {
+            root.classList.add('dark');
+            root.style.setProperty('--vpss-bg-splash', '#0B1021');
+            root.style.setProperty('--vpss-bg-loader', '#7B9EFF');
+            document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0B1021');
+          } else {
+            root.style.setProperty('--vpss-bg-splash', '#f1f5f9');
+            root.style.setProperty('--vpss-bg-loader', '#4B6EDF');
           }
         }
         catch (e) {}

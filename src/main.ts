@@ -6,6 +6,7 @@ import { LoadingPlugin } from 'vue-loading-overlay';
 import { installAbortSignalPolyfill } from 'abort-signal-polyfill';
 
 import { registerSW } from 'virtual:pwa-register';
+import { hideSplashScreen } from 'vite-plugin-splash-screen/runtime';
 import shadow from 'vue-shadow-dom';
 import { plausible } from './plugins/plausible.plugin';
 import '@/utils/json5-bigint';
@@ -55,3 +56,10 @@ app.use(store, 'pomodoro-store');
 app.use(Vue3Katex);
 
 app.mount('#app');
+
+// Hide the inlined splash once the app shell and router are ready (PWA-safe).
+router.isReady().then(() => {
+  hideSplashScreen();
+}).catch(() => {
+  hideSplashScreen();
+});

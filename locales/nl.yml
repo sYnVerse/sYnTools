@@ -57,26 +57,6 @@ search:
   placeholder: Typ om een gereedschap of opdracht te zoeken...
 tools:
   crop-image:
-<<<<<<< HEAD
-    title: "Afbeelding bijsnijden"
-    description: "Snijd afbeeldingen bij, wijzig het formaat en roteer ze met aangepaste achtergrondkleuren."
-    texts:
-      drag-drop: "Sleep uw afbeelding hierheen of klik om te bladeren"
-      drag-hint: "Sleep om te positioneren • Scroll om te zoomen ({zoom}%)"
-      flip-h: "Spiegel H"
-      flip-v: "Spiegel V"
-      reset: "Herstellen"
-      fit: "Passend maken"
-      change-image: "Afbeelding wijzigen"
-      aspect-ratio: "Beeldverhouding:"
-      custom-ratio: "Aangepaste verhouding:"
-      background-color: "Achtergrondkleur:"
-      transparent: "Transparant"
-      zoom-image: "Afbeelding zoomen:"
-      rotate-image: "Afbeelding roteren:"
-      rule-of-thirds-grid: "Regel-van-derden raster:"
-      export-settings: "Exportinstellingen"
-=======
     title: Afbeelding bijsnijden
     description: Snijd afbeeldingen bij, wijzig het formaat en roteer ze met
       aangepaste achtergrondkleuren.
@@ -96,24 +76,10 @@ tools:
       rotate-image: "Afbeelding roteren:"
       rule-of-thirds-grid: "Regel-van-derden raster:"
       export-settings: Exportinstellingen
->>>>>>> sharevb/chore/all-my-stuffs
       export-format: "Exportformaat:"
       image-quality: "Afbeeldingskwaliteit:"
       export-width: "Exportbreedte:"
       custom-width: "Aangepaste breedte (px):"
-<<<<<<< HEAD
-      export-download-image: "Bijgesneden afbeelding exporteren & downloaden"
-      ratio-square: "1:1 (Vierkant)"
-      ratio-widescreen: "16:9 (Breedbeeld)"
-      ratio-portrait: "9:16 (Portret)"
-      ratio-standard: "4:3 (Standaard)"
-      ratio-photo: "3:2 (Foto)"
-      ratio-original: "Originele beeldverhouding"
-      ratio-custom: "Aangepaste verhouding"
-      width-original: "Originele bijsnijdgrootte"
-      width-viewport: "Viewport-grootte"
-      width-custom: "Aangepaste breedte"
-=======
       export-download-image: Bijgesneden afbeelding exporteren & downloaden
       ratio-square: 1:1 (Vierkant)
       ratio-widescreen: 16:9 (Breedbeeld)
@@ -128,7 +94,6 @@ tools:
       label-png: PNG
       label-jpeg: JPEG
       label-webp: WebP
->>>>>>> sharevb/chore/all-my-stuffs
   categories:
     favorite-tools: Jouw favoriete tools
     crypto: Crypto
@@ -9919,7 +9884,7 @@ about:
     waarvan je denkt dat ze het ook nuttig zullen vinden en vergeet niet om het
     te bookmarken in je snelkoppelingenbalk!
 
-    IT Tools is open-source (onder de GPL-3.0-licentie) en gratis, en dat zal
+    IT Tools is open-source (onder de AGPL-3.0-or-later-licentie) en gratis, en dat zal
     altijd zo blijven. Als je mijn werk aan deze fork wilt ondersteunen en me
     wilt aanmoedigen om meer tools of functionaliteiten toe te voegen, overweeg
     dan om me te steunen door [mij te

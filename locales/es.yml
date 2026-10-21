@@ -71,7 +71,7 @@ about:
     profesionales de TI. Si te resulta útil, compártelo con quienes creas que
     también lo puedan encontrar y no olvides guardarlo en tus favoritos.
 
-    IT Tools es de código abierto (bajo la licencia GPL-3.0) y gratuito, y
+    IT Tools es de código abierto (bajo la licencia AGPL-3.0-or-later) y gratuito, y
     siempre lo será. Si quieres apoyar mi trabajo en esta bifurcación y animarme
     a añadir más herramientas o funcionalidades, considera
     [patrocinarme](https://www.buymeacoffee.com/sharevb).
@@ -113,26 +113,6 @@ search:
   placeholder: Escriba para buscar una herramienta o un comando...
 tools:
   crop-image:
-<<<<<<< HEAD
-    title: "Recortar imagen"
-    description: "Recorte, cambie el tamaño y rote imágenes con colores de fondo personalizados."
-    texts:
-      drag-drop: "Arrastre y suelte su imagen aquí, o haga clic para buscar"
-      drag-hint: "Arrastrar para posicionar • Desplazar para hacer zoom ({zoom}%)"
-      flip-h: "Voltear H"
-      flip-v: "Voltear V"
-      reset: "Restablecer"
-      fit: "Ajustar"
-      change-image: "Cambiar imagen"
-      aspect-ratio: "Relación de aspecto:"
-      custom-ratio: "Relación personalizada:"
-      background-color: "Color de fondo:"
-      transparent: "Transparente"
-      zoom-image: "Hacer zoom en imagen:"
-      rotate-image: "Rotar imagen:"
-      rule-of-thirds-grid: "Cuadrícula de regla de tercios:"
-      export-settings: "Configuración de exportación"
-=======
     title: Recortar imagen
     description: Recorte, cambie el tamaño y rote imágenes con colores de fondo
       personalizados.
@@ -152,24 +132,10 @@ tools:
       rotate-image: "Rotar imagen:"
       rule-of-thirds-grid: "Cuadrícula de regla de tercios:"
       export-settings: Configuración de exportación
->>>>>>> sharevb/chore/all-my-stuffs
       export-format: "Formato de exportación:"
       image-quality: "Calidad de imagen:"
       export-width: "Ancho de exportación:"
       custom-width: "Ancho personalizado (px):"
-<<<<<<< HEAD
-      export-download-image: "Exportar y descargar imagen recortada"
-      ratio-square: "1:1 (Cuadrado)"
-      ratio-widescreen: "16:9 (Pantalla ancha)"
-      ratio-portrait: "9:16 (Retrato)"
-      ratio-standard: "4:3 (Estándar)"
-      ratio-photo: "3:2 (Foto)"
-      ratio-original: "Relación de aspecto original"
-      ratio-custom: "Relación personalizada"
-      width-original: "Tamaño de recorte original"
-      width-viewport: "Tamaño de la pantalla de visualización"
-      width-custom: "Ancho personalizado"
-=======
       export-download-image: Exportar y descargar imagen recortada
       ratio-square: 1:1 (Cuadrado)
       ratio-widescreen: 16:9 (Pantalla ancha)
@@ -184,7 +150,6 @@ tools:
       label-png: PNG
       label-jpeg: JPEG
       label-webp: WebP
->>>>>>> sharevb/chore/all-my-stuffs
   categories:
     favorite-tools: Tus herramientas favoritas
     crypto: Cripto

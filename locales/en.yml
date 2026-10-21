@@ -12,6 +12,42 @@ about:
     name: Name
     desc: Description
     category: Category
+  page:
+    document-title: About - sYnTools
+    meta-description: sYnTools is Chris Tran's self-hosted fork of it-tools at tools.christran.io.
+    eyebrow: tools.christran.io
+    title: sYnTools
+    tagline: Engineering. Security. Automation.
+    intro-heading: What this is
+    intro: >-
+      sYnTools is Chris Tran's self-hosted collection of handy developer and IT
+      utilities at tools.christran.io — a fork of it-tools, maintained for the
+      christran.io toolkit.
+    credits-heading: Credits
+    credits-lead: This project is a fork of
+    credits-via: via
+    credits-corentin: The original project is by
+    credits-sharevb: it was extended upstream by ShareVB and contributors.
+    license-heading: License & source
+    license-body: >-
+      Chris Tran / sYnVerse modifications and the combined work are licensed under
+    license-upstream: Upstream it-tools code remains under GPL-3.0; see
+    source-label: "Source code (AGPL §13):"
+    privacy-heading: Privacy
+    privacy-body: >-
+      Most tools process your inputs in the browser. Some optional tools may call
+      an external helper you configure. For how christran.io sites handle hosting
+      and analytics, see the
+    links-heading: Links
+    link-tools: tools.christran.io
+    link-site: christran.io
+    link-about-chris: About Chris
+    link-portfolio: Portfolio
+    link-blog: Blog
+    link-github: GitHub (sYnVerse)
+    link-linkedin: LinkedIn
+    link-privacy: Privacy Policy
+    link-terms: Terms of Service
   content-fork: >
     # About IT-Tools
 
@@ -22,7 +58,7 @@ about:
     you think may find it useful too and don't forget to bookmark it in your
     shortcut bar!
 
-    IT Tools is open-source (under the GPL-3.0 license) and free, and will
+    IT Tools is open-source (under the AGPL-3.0-or-later license) and free, and will
     always be. If you want to support my work on this fork, and encourage me to
     add more tools or functionalities, please consider supporting by [sponsoring
     me](https://www.buymeacoffee.com/sharevb).
@@ -127,26 +163,6 @@ home:
       it-tools-handy-online-tools-for-developers: IT Tools - Handy online tools for developers
 tools:
   crop-image:
-<<<<<<< HEAD
-    title: "Crop image"
-    description: "Crop, resize, and rotate images with custom background colors."
-    texts:
-      drag-drop: "Drag and drop your image here, or click to browse"
-      drag-hint: "Drag to position • Scroll to zoom ({zoom}%)"
-      flip-h: "Flip H"
-      flip-v: "Flip V"
-      reset: "Reset"
-      fit: "Fit"
-      change-image: "Change Image"
-      aspect-ratio: "Aspect Ratio:"
-      custom-ratio: "Custom Ratio:"
-      background-color: "Background Color:"
-      transparent: "Transparent"
-      zoom-image: "Zoom Image:"
-      rotate-image: "Rotate Image:"
-      rule-of-thirds-grid: "Rule-of-Thirds Grid:"
-      export-settings: "Export Settings"
-=======
     title: Crop image
     description: Crop, resize, and rotate images with custom background colors.
     texts:
@@ -165,24 +181,10 @@ tools:
       rotate-image: "Rotate Image:"
       rule-of-thirds-grid: "Rule-of-Thirds Grid:"
       export-settings: Export Settings
->>>>>>> sharevb/chore/all-my-stuffs
       export-format: "Export Format:"
       image-quality: "Image Quality:"
       export-width: "Export Width:"
       custom-width: "Custom Width (px):"
-<<<<<<< HEAD
-      export-download-image: "Export & Download Cropped Image"
-      ratio-square: "1:1 (Square)"
-      ratio-widescreen: "16:9 (Widescreen)"
-      ratio-portrait: "9:16 (Portrait)"
-      ratio-standard: "4:3 (Standard)"
-      ratio-photo: "3:2 (Photo)"
-      ratio-original: "Original Aspect Ratio"
-      ratio-custom: "Custom Ratio"
-      width-original: "Original Crop Size"
-      width-viewport: "Viewport Size"
-      width-custom: "Custom Width"
-=======
       export-download-image: Export & Download Cropped Image
       ratio-square: 1:1 (Square)
       ratio-widescreen: 16:9 (Widescreen)
@@ -197,7 +199,6 @@ tools:
       label-png: PNG
       label-jpeg: JPEG
       label-webp: WebP
->>>>>>> sharevb/chore/all-my-stuffs
   chronometer:
     title: Chronometer
     description: Monitor the duration of a thing. Basically a chronometer with

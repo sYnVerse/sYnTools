@@ -69,7 +69,7 @@ about:
     innymi, którzy mogą się z nią również zapoznać, i nie zapomnij dodać jej do
     zakładek w pasku skrótów!
 
-    IT Tools jest projektem open-source (na licencji GPL-3.0) i darmowym, i
+    IT Tools jest projektem open-source (na licencji AGPL-3.0-or-later) i darmowym, i
     zawsze takim pozostanie. Jeśli chcesz wesprzeć moją pracę nad tym forkiem i
     zachęcić mnie do dodawania kolejnych narzędzi lub funkcjonalności, rozważ
     wsparcie poprzez [sponsorowanie](https://www.buymeacoffee.com/sharevb).
@@ -107,26 +107,6 @@ search:
   placeholder: Wpisz, aby wyszukać narzędzie lub polecenie...
 tools:
   crop-image:
-<<<<<<< HEAD
-    title: "Przytnij obraz"
-    description: "Przycinaj, zmieniaj rozmiar i obracaj obrazy z niestandardowymi kolorami tła."
-    texts:
-      drag-drop: "Przeciągnij i upuść obraz tutaj lub kliknij, aby przeglądać"
-      drag-hint: "Przeciągnij, aby ustawić • Przewiń, aby powiększyć ({zoom}%)"
-      flip-h: "Obróć H"
-      flip-v: "Obróć V"
-      reset: "Resetuj"
-      fit: "Dopasuj"
-      change-image: "Zmień obraz"
-      aspect-ratio: "Proporcje obrazu:"
-      custom-ratio: "Niestandardowe proporcje:"
-      background-color: "Kolor tła:"
-      transparent: "Przezroczysty"
-      zoom-image: "Powiększenie obrazu:"
-      rotate-image: "Obrót obrazu:"
-      rule-of-thirds-grid: "Siatka reguły trójpodziału:"
-      export-settings: "Ustawienia eksportu"
-=======
     title: Przytnij obraz
     description: Przycinaj, zmieniaj rozmiar i obracaj obrazy z niestandardowymi
       kolorami tła.
@@ -146,24 +126,10 @@ tools:
       rotate-image: "Obrót obrazu:"
       rule-of-thirds-grid: "Siatka reguły trójpodziału:"
       export-settings: Ustawienia eksportu
->>>>>>> sharevb/chore/all-my-stuffs
       export-format: "Format eksportu:"
       image-quality: "Jakość obrazu:"
       export-width: "Szerokość eksportu:"
       custom-width: "Niestandardowa szerokość (px):"
-<<<<<<< HEAD
-      export-download-image: "Eksportuj i pobierz przycięty obraz"
-      ratio-square: "1:1 (Kwadrat)"
-      ratio-widescreen: "16:9 (Panoramiczny)"
-      ratio-portrait: "9:16 (Portret)"
-      ratio-standard: "4:3 (Standard)"
-      ratio-photo: "3:2 (Zdjęcie)"
-      ratio-original: "Oryginalne proporcje"
-      ratio-custom: "Niestandardowe proporcje"
-      width-original: "Oryginalny rozmiar kadrowania"
-      width-viewport: "Rozmiar obszaru roboczego"
-      width-custom: "Niestandardowa szerokość"
-=======
       export-download-image: Eksportuj i pobierz przycięty obraz
       ratio-square: 1:1 (Kwadrat)
       ratio-widescreen: 16:9 (Panoramiczny)
@@ -178,7 +144,6 @@ tools:
       label-png: PNG
       label-jpeg: JPEG
       label-webp: WebP
->>>>>>> sharevb/chore/all-my-stuffs
   categories:
     favorite-tools: Twoje ulubione narzędzia
     crypto: Kryptografia

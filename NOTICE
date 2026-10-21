@@ -1,0 +1,21 @@
+sYnTools licensing notice
+=========================
+
+sYnTools is a fork of CorentinTh/it-tools (https://github.com/CorentinTh/it-tools),
+via sharevb/it-tools (https://github.com/sharevb/it-tools). Upstream it-tools code
+is licensed under the GNU General Public License version 3 (GPL-3.0).
+
+Copyright notices and attributions from upstream authors (including Corentin
+Thomasset / CorentinTh and contributors to CorentinTh/it-tools and sharevb/it-tools)
+are retained. Those upstream portions remain available under their original GPL-3.0
+grant.
+
+Modifications by Chris Tran (sYnVerse) and the combined work as distributed in this
+repository are licensed under the GNU Affero General Public License version 3 or
+later (AGPL-3.0-or-later). See the LICENSE file for the full AGPL-3.0 text.
+
+This combined distribution relies on section 13 of GPLv3 ("Use with the GNU Affero
+General Public License"), which permits combining GPLv3-covered work with AGPLv3
+code into a single combined work. The GPL continues to apply to the upstream
+GPLv3-covered parts; AGPL section 13's network source-offer requirements apply to
+the combined work.

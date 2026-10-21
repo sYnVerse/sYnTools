@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="72" viewBox="0 0 300 72" role="img" aria-label="sYnTools">
+  <title>sYnTools</title>
+  <!-- Splash wordmark: christran.io accent #7B9EFF; system fonts so it paints without webfonts. -->
+  <rect x="10" y="16" width="40" height="40" rx="10" fill="#7B9EFF"/>
+  <text x="30" y="44" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#0B1021">sY</text>
+  <text x="62" y="48" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="36" font-weight="700" letter-spacing="0.4" fill="#7B9EFF">sYnTools</text>
+</svg>

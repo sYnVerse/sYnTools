@@ -71,7 +71,7 @@ about:
     anderen, die sie Ihrer Meinung nach ebenfalls nützlich finden könnten, und
     vergessen Sie nicht, sie in Ihrer Shortcut-Leiste zu speichern!
 
-    IT-Tools ist Open Source (unter der GPL-3.0-Lizenz) und kostenlos und wird
+    IT-Tools ist Open Source (unter der AGPL-3.0-or-later-Lizenz) und kostenlos und wird
     es auch immer bleiben. Wenn Sie meine Arbeit an diesem Fork unterstützen und
     mich ermutigen möchten, weitere Tools und Funktionen hinzuzufügen,
     unterstützen Sie mich bitte durch ein
@@ -129,26 +129,6 @@ formatTransformer:
   viewer: Zuschauer
 tools:
   crop-image:
-<<<<<<< HEAD
-    title: "Bild zuschneiden"
-    description: "Bilder zuschneiden, die Größe ändern und drehen mit benutzerdefinierten Hintergrundfarben."
-    texts:
-      drag-drop: "Ziehen Sie Ihr Bild hierher oder klicken Sie zum Durchsuchen"
-      drag-hint: "Ziehen zum Positionieren • Scrollen zum Zoomen ({zoom}%)"
-      flip-h: "Spiegeln H"
-      flip-v: "Spiegeln V"
-      reset: "Zurücksetzen"
-      fit: "Anpassen"
-      change-image: "Bild ändern"
-      aspect-ratio: "Seitenverhältnis:"
-      custom-ratio: "Benutzerdefiniertes Verhältnis:"
-      background-color: "Hintergrundfarbe:"
-      transparent: "Transparent"
-      zoom-image: "Bild zoomen:"
-      rotate-image: "Bild drehen:"
-      rule-of-thirds-grid: "Drittel-Regel-Gitter:"
-      export-settings: "Exporteinstellungen"
-=======
     title: Bild zuschneiden
     description: Bilder zuschneiden, die Größe ändern und drehen mit
       benutzerdefinierten Hintergrundfarben.
@@ -168,24 +148,10 @@ tools:
       rotate-image: "Bild drehen:"
       rule-of-thirds-grid: "Drittel-Regel-Gitter:"
       export-settings: Exporteinstellungen
->>>>>>> sharevb/chore/all-my-stuffs
       export-format: "Exportformat:"
       image-quality: "Bildqualität:"
       export-width: "Exportbreite:"
       custom-width: "Benutzerdefinierte Breite (px):"
-<<<<<<< HEAD
-      export-download-image: "Beschnittenes Bild exportieren & herunterladen"
-      ratio-square: "1:1 (Quadratisch)"
-      ratio-widescreen: "16:9 (Breitbild)"
-      ratio-portrait: "9:16 (Porträt)"
-      ratio-standard: "4:3 (Standard)"
-      ratio-photo: "3:2 (Foto)"
-      ratio-original: "Original-Seitenverhältnis"
-      ratio-custom: "Benutzerdefiniertes Verhältnis"
-      width-original: "Originale Zuschneidegröße"
-      width-viewport: "Anzeigegröße"
-      width-custom: "Benutzerdefinierte Breite"
-=======
       export-download-image: Beschnittenes Bild exportieren & herunterladen
       ratio-square: 1:1 (Quadratisch)
       ratio-widescreen: 16:9 (Breitbild)
@@ -200,7 +166,6 @@ tools:
       label-png: PNG
       label-jpeg: JPEG
       label-webp: WebP
->>>>>>> sharevb/chore/all-my-stuffs
   categories:
     favorite-tools: Deine Lieblingstools
     crypto: Krypto

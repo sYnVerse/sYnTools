@@ -58,26 +58,6 @@ search:
   placeholder: Skriv for at søge efter et værktøj eller en kommando...
 tools:
   crop-image:
-<<<<<<< HEAD
-    title: "Beskær billede"
-    description: "Beskær, tilpas størrelse og roter billeder med brugerdefinerede baggrundsfarver."
-    texts:
-      drag-drop: "Træk og slip dit billede her, eller klik for at gennemse"
-      drag-hint: "Træk for at placere • Rul for at zoome ({zoom}%)"
-      flip-h: "Vend H"
-      flip-v: "Vend V"
-      reset: "Nulstil"
-      fit: "Tilpas"
-      change-image: "Skift billede"
-      aspect-ratio: "Billedformat:"
-      custom-ratio: "Brugerdefineret format:"
-      background-color: "Baggrundsfarve:"
-      transparent: "Gennemsigtig"
-      zoom-image: "Zoom billede:"
-      rotate-image: "Roter billede:"
-      rule-of-thirds-grid: "Tredjedelsregel-gitter:"
-      export-settings: "Eksportindstillinger"
-=======
     title: Beskær billede
     description: Beskær, tilpas størrelse og roter billeder med brugerdefinerede
       baggrundsfarver.
@@ -97,24 +77,10 @@ tools:
       rotate-image: "Roter billede:"
       rule-of-thirds-grid: "Tredjedelsregel-gitter:"
       export-settings: Eksportindstillinger
->>>>>>> sharevb/chore/all-my-stuffs
       export-format: "Eksportformat:"
       image-quality: "Billedkvalitet:"
       export-width: "Eksportbredde:"
       custom-width: "Brugerdefineret bredde (px):"
-<<<<<<< HEAD
-      export-download-image: "Eksporter og download beskåret billede"
-      ratio-square: "1:1 (Kvadratisk)"
-      ratio-widescreen: "16:9 (Widescreen)"
-      ratio-portrait: "9:16 (Portræt)"
-      ratio-standard: "4:3 (Standard)"
-      ratio-photo: "3:2 (Foto)"
-      ratio-original: "Originalt billedformat"
-      ratio-custom: "Brugerdefineret format"
-      width-original: "Original beskæringsstørrelse"
-      width-viewport: "Viewport-størrelse"
-      width-custom: "Brugerdefineret bredde"
-=======
       export-download-image: Eksporter og download beskåret billede
       ratio-square: 1:1 (Kvadratisk)
       ratio-widescreen: 16:9 (Widescreen)
@@ -129,7 +95,6 @@ tools:
       label-png: PNG
       label-jpeg: JPEG
       label-webp: WebP
->>>>>>> sharevb/chore/all-my-stuffs
   categories:
     favorite-tools: Dine favorit værktøjer
     crypto: Crypto
@@ -9823,7 +9788,7 @@ about:
     dele det med folk, du tror, kan finde det nyttigt, og glem ikke at bogmærke
     det i din genvejslinje!
 
-    IT Tools er open source (under GPL-3.0-licensen) og gratis, og vil altid
+    IT Tools er open source (under AGPL-3.0-or-later-licensen) og gratis, og vil altid
     være det. Hvis du vil støtte mit arbejde på denne fork og opfordre mig til
     at tilføje flere værktøjer eller funktionaliteter, kan du overveje at støtte
     ved at [sponsorere mig](https://www.buymeacoffee.com/sharevb).
