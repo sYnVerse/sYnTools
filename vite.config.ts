@@ -2,6 +2,7 @@ import { URL, fileURLToPath } from 'node:url';
 import { resolve } from 'node:path';
 import { nodePolyfills } from 'vite-plugin-node-polyfills';
 import wasm from 'vite-plugin-wasm';
+import { splashScreen } from 'vite-plugin-splash-screen';
 
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
@@ -144,6 +145,17 @@ export default defineConfig({
     Unocss(),
     nodePolyfills(),
     wasm(),
+    // Brand splash for tools.christran.io (christran.io --accent / --background).
+    // Colors can be overridden at runtime via --vpss-bg-splash / --vpss-bg-loader
+    // (set early in index.html from the user's color scheme).
+    splashScreen({
+      logoSrc: 'syntools-splash.svg',
+      splashBg: '#0B1021',
+      loaderBg: '#7B9EFF',
+      loaderType: 'line',
+      // Short floor so fast loads don't flash; keep low for perceived performance.
+      minDurationMs: 400,
+    }),
     visualizer(),
     hostname
       ? Sitemap({

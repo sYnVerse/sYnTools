@@ -12,6 +12,42 @@ about:
     name: Name
     desc: Description
     category: Category
+  page:
+    document-title: About - sYnTools
+    meta-description: sYnTools is Chris Tran's self-hosted fork of it-tools at tools.christran.io.
+    eyebrow: tools.christran.io
+    title: sYnTools
+    tagline: Engineering. Security. Automation.
+    intro-heading: What this is
+    intro: >-
+      sYnTools is Chris Tran's self-hosted collection of handy developer and IT
+      utilities at tools.christran.io — a fork of it-tools, maintained for the
+      christran.io toolkit.
+    credits-heading: Credits
+    credits-lead: This project is a fork of
+    credits-via: via
+    credits-corentin: The original project is by
+    credits-sharevb: it was extended upstream by ShareVB and contributors.
+    license-heading: License & source
+    license-body: >-
+      Chris Tran / sYnVerse modifications and the combined work are licensed under
+    license-upstream: Upstream it-tools code remains under GPL-3.0; see
+    source-label: "Source code (AGPL §13):"
+    privacy-heading: Privacy
+    privacy-body: >-
+      Most tools process your inputs in the browser. Some optional tools may call
+      an external helper you configure. For how christran.io sites handle hosting
+      and analytics, see the
+    links-heading: Links
+    link-tools: tools.christran.io
+    link-site: christran.io
+    link-about-chris: About Chris
+    link-portfolio: Portfolio
+    link-blog: Blog
+    link-github: GitHub (sYnVerse)
+    link-linkedin: LinkedIn
+    link-privacy: Privacy Policy
+    link-terms: Terms of Service
   content-fork: >
     # About IT-Tools
 
