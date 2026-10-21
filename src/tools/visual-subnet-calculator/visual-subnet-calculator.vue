@@ -1,8 +1,7 @@
 <script setup lang="ts">
+import { appBaseUrl as base } from '@/utils/base-url';
 const isDarkTheme = useDark();
 const iframeRef = ref<HTMLIFrameElement | null>(null);
-
-const base = import.meta.env.BASE_URL ?? '/';
 
 const c = new URLSearchParams(window.location.search).get('c');
 
@@ -25,10 +24,7 @@ function applyIframeTheme() {
     return;
   }
 
-  doc.documentElement.setAttribute(
-    'data-bs-theme',
-    isDarkTheme.value ? 'dark' : 'light',
-  );
+  doc.documentElement.setAttribute('data-bs-theme', isDarkTheme.value ? 'dark' : 'light');
 }
 
 // Watch for theme changes
@@ -51,10 +47,6 @@ onMounted(() => {
 
 <template>
   <div>
-    <iframe
-      ref="iframeRef"
-      :src="iframeSrc"
-      style="width:100%; height:95vh;"
-    />
+    <iframe ref="iframeRef" :src="iframeSrc" style="width: 100%; height: 95vh" />
   </div>
 </template>
