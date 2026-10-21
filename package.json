@@ -13,7 +13,7 @@
     "vuejs",
     "website"
   ],
-  "license": "GNU GPLv3",
+  "license": "AGPL-3.0-or-later",
   "author": "Corentin Th <corentin.thomasset74+it-tools@gmail.com> (https://corentin.tech)",
   "repository": {
     "type": "git",
